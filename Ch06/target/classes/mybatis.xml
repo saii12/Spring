@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <mappers>
+    <mapper resource="./mappers/user1.xml"/>
+    <mapper resource="./mappers/user2.xml"/> <!-- mappers/user3.xml 이렇게 없는 파일까지 미리 해놓으면 오류생김 -->
+    
+  </mappers>
+</configuration>

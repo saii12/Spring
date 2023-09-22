@@ -3,15 +3,15 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>user1::register</title>
+		<title>user2::register</title>
 	</head>
 	<body>
-		<h3>user1 등록</h3>
+		<h3>user2 등록</h3>
 		
 		<a href="/Ch06/index">메인</a>
-		<a href="/Ch06/user1/list">목록</a>
+		<a href="/Ch06/user2/list">목록</a>
 		
-		<form action="/Ch06/user1/register" method="post">
+		<form action="/Ch06/user2/register" method="post">
 			<table border="1">
 				<tr>
 					<td>아이디</td>

@@ -38,7 +38,12 @@
 	</bean>
 	
 	<!-- Mybatis 설정 -->
+	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean"> <!-- .class 확장자 지우라고!! -->
+		<property name="dataSource" ref="dataSource"></property> <!-- ref -->
+		<property name="configLocation" value="classpath:mybatis.xml"></property> <!-- value -->
+	</bean>
+	
 	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
-		
+		<constructor-arg ref="sqlSessionFactoryBean"></constructor-arg>
 	</bean>
 </beans>
