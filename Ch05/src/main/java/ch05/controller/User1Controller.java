@@ -56,7 +56,7 @@ public class User1Controller {
 	}
 	
 	@GetMapping("/user1/delete")
-	public String delete(String uid) {
+	public String delete(String uid) { // delete도 modify처럼 똑같이 list.jsp에서 uid로 파라미터 전송하는데 왜 얘는 requestParam 안 쓰지??
 		service.deleteUser1(uid);
 		return "redirect:/user1/list";
 	}
