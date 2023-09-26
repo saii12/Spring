@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> 
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>user6::register</title>
+	</head>
+	<body>
+		<h3>user6 등록</h3>
+		
+		<a th:href="@{/index}">메인</a> <!-- thymeleaf 속성대로 -->
+		<a th:href="@{/user6/list}">목록</a>
+		
+		<form action="/Ch07/user6/modify" method="post">
+			<table border="1">
+				<tr>
+					<td>아이디</td>
+					<td><input type="text" name="uid" th:value="${dto.uid}" readonly /></td>
+				</tr>
+				<tr>
+					<td>이름</td>
+					<td><input type="text" name="name" th:value="${dto.name}" /></td>
+				</tr>
+				<tr>
+					<td>생년월일</td>
+					<td><input type="text" name="birth" th:value="${dto.birth}" /></td>
+				</tr>
+				<tr>
+					<td>성별</td>
+					<td>
+						<label><input type="radio" name="gender" value="M" checked>남</label>
+						<label><input type="radio" name="gender" value="F">여</label>
+					</td>
+				</tr>
+				<tr>
+					<td>나이</td>
+					<td><input type="number" name="age" th:value="${dto.age}" /></td>
+				</tr>
+				<tr>
+					<td>주소</td>
+					<td>
+						<select name="addr">
+			                <option>서울</option>
+			                <option>대전</option>
+			                <option>대구</option>
+			                <option>부산</option>
+			                <option>광주</option>
+           				 </select>
+           			</td>
+				</tr>
+				<tr>
+					<td>휴대폰</td>
+					<td><input type="text" name="hp" th:value="${dto.hp}" /></td>
+				</tr>
+				
+				<tr>
+					<td colspan="2" align="right"><input type="submit" value="수정하기"/></td>
+				</tr>
+			</table>
+		</form>		
+	</body>
+</html>

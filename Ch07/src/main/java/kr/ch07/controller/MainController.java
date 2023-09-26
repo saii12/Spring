@@ -67,7 +67,11 @@ public class MainController {
 	}
 	
 	@GetMapping("/include")
-	public String include() {
+	public String include(String name, int age) {
+		
+		log.info("name : " + name);
+		log.info("age : " + age);
+		
 		return "/include";
 	}
 	

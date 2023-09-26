@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> 
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>user6::list</title>
+	</head>
+	<body>
+		<h3>user6 목록</h3>
+		
+		<a href="/Ch07/index">메인</a>
+		<a href="/Ch07/user6/register">등록</a>
+		
+			<table border="1">
+				<tr>
+					<th>아이디</th>
+					<th>이름</th>
+					<th>생년월일</th>
+					<th>성별</th>
+					<th>나이</th>
+					<th>주소</th>
+					<th>휴대폰</th>
+				</tr>
+					<tr th:each="user:${users}"> <!-- thymeleaf 속성대로 -->
+						<td>[[${user.uid}]]</td> <!-- thymeleaf 속성대로 -->
+						<td>[[${user.name}]]</td>
+						<td>[[${user.birth}]]</td>
+						<td>[[${user.gender}]]</td>
+						<td>[[${user.age}]]</td>
+						<td>[[${user.addr}]]</td>
+						<td>[[${user.hp}]]</td>
+						<td>
+							<a th:href="@{/user6/modify(uid=${user.uid})}">수정</a> <!-- thymeleaf 속성대로  파라미터 보내는법!!! -->
+							<a th:href="@{/user6/delete(uid=${user.uid})}">삭제</a>
+						</td>
+					</tr>
+				</c:forEach>
+			</table>
+		</form>		
+	</body>
+</html>
