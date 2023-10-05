@@ -1,0 +1,989 @@
+2023-10-05T11:39:38.550+09:00  INFO 5364 --- [restartedMain] kr.ch09.Ch09Application                  : Starting Ch09Application using Java 17.0.8.1 with PID 5364 (C:\Users\Java\Desktop\workspace\Spring\Ch09\target\classes started by Java in C:\Users\Java\Desktop\workspace\Spring\Ch09)
+2023-10-05T11:39:38.552+09:00  INFO 5364 --- [restartedMain] kr.ch09.Ch09Application                  : No active profile set, falling back to 1 default profile: "default"
+2023-10-05T11:39:38.578+09:00  INFO 5364 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-05T11:39:38.578+09:00  INFO 5364 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-05T11:39:38.895+09:00  INFO 8964 --- [restartedMain] kr.ch09.Ch09Application                  : Starting Ch09Application using Java 17.0.8.1 with PID 8964 (C:\Users\Java\Desktop\workspace\Spring\Ch09\target\classes started by Java in C:\Users\Java\Desktop\workspace\Spring\Ch09)
+2023-10-05T11:39:38.895+09:00  INFO 8964 --- [restartedMain] kr.ch09.Ch09Application                  : No active profile set, falling back to 1 default profile: "default"
+2023-10-05T11:39:38.908+09:00  INFO 5364 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-05T11:39:38.934+09:00  INFO 5364 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 1 JPA repository interfaces.
+2023-10-05T11:39:38.976+09:00  INFO 8964 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-05T11:39:38.979+09:00  INFO 8964 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JPA repository interfaces.
+2023-10-05T11:39:38.992+09:00  WARN 8964 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.ch09]' package. Please check your configuration.
+2023-10-05T11:39:39.000+09:00  WARN 5364 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.ch09]' package. Please check your configuration.
+2023-10-05T11:39:39.018+09:00  INFO 8964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-05T11:39:39.018+09:00  INFO 8964 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-05T11:39:39.018+09:00  INFO 8964 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-05T11:39:39.028+09:00  INFO 8964 --- [restartedMain] o.a.c.c.C.[.[localhost].[/Ch09]          : Initializing Spring embedded WebApplicationContext
+2023-10-05T11:39:39.028+09:00  INFO 8964 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 132 ms
+2023-10-05T11:39:39.043+09:00  INFO 8964 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-05T11:39:39.047+09:00  INFO 8964 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T11:39:39.047+09:00  INFO 8964 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-05T11:39:39.047+09:00  INFO 8964 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-29 - Starting...
+2023-10-05T11:39:39.145+09:00  INFO 8964 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-29 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7239892d
+2023-10-05T11:39:39.145+09:00  INFO 8964 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-29 - Start completed.
+2023-10-05T11:39:39.145+09:00  WARN 8964 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-10-05T11:39:39.146+09:00  INFO 8964 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T11:39:39.148+09:00  INFO 8964 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-05T11:39:39.148+09:00  INFO 8964 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T11:39:39.163+09:00  WARN 8964 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'service': Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'repo': Error creating bean with name 'userRepository' defined in kr.ch09.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Not a managed type: class kr.ch09.entity.UserEntity
+2023-10-05T11:39:39.164+09:00  INFO 8964 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T11:39:39.164+09:00  INFO 8964 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-29 - Shutdown initiated...
+2023-10-05T11:39:39.174+09:00  INFO 8964 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-29 - Shutdown completed.
+2023-10-05T11:39:39.174+09:00  INFO 8964 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-05T11:39:39.177+09:00  INFO 8964 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-10-05T11:39:39.178+09:00 ERROR 8964 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'service': Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'repo': Error creating bean with name 'userRepository' defined in kr.ch09.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Not a managed type: class kr.ch09.entity.UserEntity
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:747) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:492) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942) ~[spring-context-6.0.12.jar:6.0.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.12.jar:6.0.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298) ~[spring-boot-3.1.4.jar:3.1.4]
+	at kr.ch09.Ch09Application.main(Ch09Application.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.4.jar:3.1.4]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'repo': Error creating bean with name 'userRepository' defined in kr.ch09.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Not a managed type: class kr.ch09.entity.UserEntity
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:747) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:492) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:764) ~[spring-beans-6.0.12.jar:6.0.12]
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in kr.ch09.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Not a managed type: class kr.ch09.entity.UserEntity
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:764) ~[spring-beans-6.0.12.jar:6.0.12]
+	... 39 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class kr.ch09.entity.UserEntity
+	at org.hibernate.metamodel.model.domain.internal.JpaMetamodelImpl.managedType(JpaMetamodelImpl.java:192) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.metamodel.model.domain.internal.MappingMetamodelImpl.managedType(MappingMetamodelImpl.java:467) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.metamodel.model.domain.internal.MappingMetamodelImpl.managedType(MappingMetamodelImpl.java:97) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:82) ~[spring-data-jpa-3.1.4.jar:3.1.4]
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:69) ~[spring-data-jpa-3.1.4.jar:3.1.4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:246) ~[spring-data-jpa-3.1.4.jar:3.1.4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:211) ~[spring-data-jpa-3.1.4.jar:3.1.4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:194) ~[spring-data-jpa-3.1.4.jar:3.1.4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:81) ~[spring-data-jpa-3.1.4.jar:3.1.4]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:317) ~[spring-data-commons-3.1.4.jar:3.1.4]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:279) ~[spring-data-commons-3.1.4.jar:3.1.4]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:245) ~[spring-data-commons-3.1.4.jar:3.1.4]
+	at org.springframework.data.util.Lazy.get(Lazy.java:114) ~[spring-data-commons-3.1.4.jar:3.1.4]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:285) ~[spring-data-commons-3.1.4.jar:3.1.4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132) ~[spring-data-jpa-3.1.4.jar:3.1.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.12.jar:6.0.12]
+	... 49 common frames omitted
+
+2023-10-05T11:39:39.256+09:00  INFO 5364 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-05T11:39:39.261+09:00  INFO 5364 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-05T11:39:39.262+09:00  INFO 5364 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-05T11:39:39.298+09:00  INFO 5364 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/Ch09]   : Initializing Spring embedded WebApplicationContext
+2023-10-05T11:39:39.298+09:00  INFO 5364 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 718 ms
+2023-10-05T11:39:39.376+09:00  INFO 5364 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-05T11:39:39.401+09:00  INFO 5364 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-05T11:39:39.402+09:00  INFO 5364 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-05T11:39:39.468+09:00  INFO 5364 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T11:39:39.540+09:00  INFO 5364 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-05T11:39:39.554+09:00  INFO 5364 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-05T11:39:39.799+09:00  INFO 5364 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@73372d9a
+2023-10-05T11:39:39.801+09:00  INFO 5364 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-05T11:39:39.837+09:00  WARN 5364 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-10-05T11:39:39.883+09:00  INFO 5364 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T11:39:39.993+09:00  INFO 5364 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-05T11:39:39.996+09:00  INFO 5364 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T11:39:40.072+09:00  WARN 5364 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'service': Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'repo': Error creating bean with name 'userRepository' defined in kr.ch09.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Not a managed type: class kr.ch09.entity.UserEntity
+2023-10-05T11:39:40.072+09:00  INFO 5364 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T11:39:40.074+09:00  INFO 5364 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-05T11:39:40.139+09:00  INFO 5364 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-05T11:39:40.141+09:00  INFO 5364 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-05T11:39:40.149+09:00  INFO 5364 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-10-05T11:39:40.160+09:00 ERROR 5364 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'service': Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'repo': Error creating bean with name 'userRepository' defined in kr.ch09.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Not a managed type: class kr.ch09.entity.UserEntity
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:747) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:492) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942) ~[spring-context-6.0.12.jar:6.0.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.12.jar:6.0.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298) ~[spring-boot-3.1.4.jar:3.1.4]
+	at kr.ch09.Ch09Application.main(Ch09Application.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.4.jar:3.1.4]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'repo': Error creating bean with name 'userRepository' defined in kr.ch09.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Not a managed type: class kr.ch09.entity.UserEntity
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:747) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:492) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:764) ~[spring-beans-6.0.12.jar:6.0.12]
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in kr.ch09.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Not a managed type: class kr.ch09.entity.UserEntity
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:764) ~[spring-beans-6.0.12.jar:6.0.12]
+	... 39 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class kr.ch09.entity.UserEntity
+	at org.hibernate.metamodel.model.domain.internal.JpaMetamodelImpl.managedType(JpaMetamodelImpl.java:192) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.metamodel.model.domain.internal.MappingMetamodelImpl.managedType(MappingMetamodelImpl.java:467) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.metamodel.model.domain.internal.MappingMetamodelImpl.managedType(MappingMetamodelImpl.java:97) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:82) ~[spring-data-jpa-3.1.4.jar:3.1.4]
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:69) ~[spring-data-jpa-3.1.4.jar:3.1.4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:246) ~[spring-data-jpa-3.1.4.jar:3.1.4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:211) ~[spring-data-jpa-3.1.4.jar:3.1.4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:194) ~[spring-data-jpa-3.1.4.jar:3.1.4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:81) ~[spring-data-jpa-3.1.4.jar:3.1.4]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:317) ~[spring-data-commons-3.1.4.jar:3.1.4]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:279) ~[spring-data-commons-3.1.4.jar:3.1.4]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:245) ~[spring-data-commons-3.1.4.jar:3.1.4]
+	at org.springframework.data.util.Lazy.get(Lazy.java:114) ~[spring-data-commons-3.1.4.jar:3.1.4]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:285) ~[spring-data-commons-3.1.4.jar:3.1.4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132) ~[spring-data-jpa-3.1.4.jar:3.1.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.12.jar:6.0.12]
+	... 49 common frames omitted
+
+2023-10-05T11:43:36.189+09:00  INFO 8964 --- [restartedMain] kr.ch09.Ch09Application                  : Starting Ch09Application using Java 17.0.8.1 with PID 8964 (C:\Users\Java\Desktop\workspace\Spring\Ch09\target\classes started by Java in C:\Users\Java\Desktop\workspace\Spring\Ch09)
+2023-10-05T11:43:36.189+09:00  INFO 8964 --- [restartedMain] kr.ch09.Ch09Application                  : No active profile set, falling back to 1 default profile: "default"
+2023-10-05T11:43:36.265+09:00  INFO 8964 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-05T11:43:36.268+09:00  INFO 8964 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JPA repository interfaces.
+2023-10-05T11:43:36.282+09:00  WARN 8964 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.ch09]' package. Please check your configuration.
+2023-10-05T11:43:36.304+09:00  INFO 8964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-05T11:43:36.304+09:00  INFO 8964 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-05T11:43:36.304+09:00  INFO 8964 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-05T11:43:36.314+09:00  INFO 8964 --- [restartedMain] o.a.c.c.C.[.[localhost].[/Ch09]          : Initializing Spring embedded WebApplicationContext
+2023-10-05T11:43:36.314+09:00  INFO 8964 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 124 ms
+2023-10-05T11:43:36.330+09:00  INFO 8964 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-05T11:43:36.333+09:00  INFO 8964 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T11:43:36.333+09:00  INFO 8964 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-05T11:43:36.333+09:00  INFO 8964 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Starting...
+2023-10-05T11:43:36.451+09:00  INFO 8964 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-30 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d55fee4
+2023-10-05T11:43:36.451+09:00  INFO 8964 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Start completed.
+2023-10-05T11:43:36.452+09:00  WARN 8964 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-10-05T11:43:36.506+09:00  INFO 8964 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T11:43:36.729+09:00  INFO 8964 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-05T11:43:36.857+09:00  INFO 8964 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T11:43:36.959+09:00  WARN 8964 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-05T11:43:36.967+09:00  INFO 8964 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-05T11:43:36.990+09:00  INFO 8964 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@30be6742, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5a5cb2b9, org.springframework.security.web.context.SecurityContextHolderFilter@32d0b26e, org.springframework.security.web.header.HeaderWriterFilter@79c75e7e, org.springframework.security.web.authentication.logout.LogoutFilter@23613db5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1a987d31, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@75d67c12, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@57e23eb7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7ac94218, org.springframework.security.web.access.ExceptionTranslationFilter@1847245, org.springframework.security.web.access.intercept.AuthorizationFilter@23c06ea4]
+2023-10-05T11:43:37.016+09:00  INFO 8964 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-05T11:43:37.021+09:00  INFO 8964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/Ch09'
+2023-10-05T11:43:37.024+09:00  INFO 8964 --- [restartedMain] kr.ch09.Ch09Application                  : Started Ch09Application in 0.851 seconds (process running for 8080.312)
+2023-10-05T11:43:37.025+09:00  INFO 8964 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' filterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   UserDetailsServiceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder,org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector,org.springframework.security.oauth2.client.registration.ClientRegistrationRepository,org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository; SearchStrategy: all) found beans of type 'org.springframework.security.core.userdetails.UserDetailsService' securityUserService (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2023-10-05T11:43:42.508+09:00  INFO 8964 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 15 class path changes (0 additions, 0 deletions, 15 modifications)
+2023-10-05T11:43:42.511+09:00  INFO 8964 --- [Thread-47] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-05T11:43:42.513+09:00  INFO 8964 --- [Thread-47] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T11:43:42.513+09:00  INFO 8964 --- [Thread-47] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Shutdown initiated...
+2023-10-05T11:43:42.618+09:00  INFO 8964 --- [Thread-47] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Shutdown completed.
+2023-10-05T11:43:42.668+09:00  INFO 8964 --- [restartedMain] kr.ch09.Ch09Application                  : Starting Ch09Application using Java 17.0.8.1 with PID 8964 (C:\Users\Java\Desktop\workspace\Spring\Ch09\target\classes started by Java in C:\Users\Java\Desktop\workspace\Spring\Ch09)
+2023-10-05T11:43:42.668+09:00  INFO 8964 --- [restartedMain] kr.ch09.Ch09Application                  : No active profile set, falling back to 1 default profile: "default"
+2023-10-05T11:43:42.737+09:00  INFO 8964 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-05T11:43:42.740+09:00  INFO 8964 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JPA repository interfaces.
+2023-10-05T11:43:42.754+09:00  WARN 8964 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.ch09]' package. Please check your configuration.
+2023-10-05T11:43:42.777+09:00  INFO 8964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-05T11:43:42.777+09:00  INFO 8964 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-05T11:43:42.777+09:00  INFO 8964 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-05T11:43:42.786+09:00  INFO 8964 --- [restartedMain] o.a.c.c.C.[.[localhost].[/Ch09]          : Initializing Spring embedded WebApplicationContext
+2023-10-05T11:43:42.786+09:00  INFO 8964 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 118 ms
+2023-10-05T11:43:42.799+09:00  INFO 8964 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-05T11:43:42.802+09:00  INFO 8964 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T11:43:42.802+09:00  INFO 8964 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-05T11:43:42.802+09:00  INFO 8964 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-31 - Starting...
+2023-10-05T11:43:42.917+09:00  INFO 8964 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-31 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19158d9f
+2023-10-05T11:43:42.918+09:00  INFO 8964 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-31 - Start completed.
+2023-10-05T11:43:42.920+09:00  WARN 8964 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-10-05T11:43:42.928+09:00  INFO 8964 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T11:43:42.949+09:00  INFO 8964 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-05T11:43:42.979+09:00  INFO 8964 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T11:43:43.008+09:00  WARN 8964 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-05T11:43:43.015+09:00  INFO 8964 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-05T11:43:43.037+09:00  INFO 8964 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@68f72a50, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@26707236, org.springframework.security.web.context.SecurityContextHolderFilter@552da8ff, org.springframework.security.web.header.HeaderWriterFilter@6e184167, org.springframework.security.web.authentication.logout.LogoutFilter@32a64c30, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@68303caa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5adafbf3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@26cb1906, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f73cda7, org.springframework.security.web.access.ExceptionTranslationFilter@3ac8c4ba, org.springframework.security.web.access.intercept.AuthorizationFilter@41d3012e]
+2023-10-05T11:43:43.060+09:00  INFO 8964 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-05T11:43:43.065+09:00  INFO 8964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/Ch09'
+2023-10-05T11:43:43.067+09:00  INFO 8964 --- [restartedMain] kr.ch09.Ch09Application                  : Started Ch09Application in 0.41 seconds (process running for 8086.355)
+2023-10-05T11:43:43.067+09:00  INFO 8964 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-10-05T11:43:47.013+09:00  INFO 12508 --- [restartedMain] kr.ch09.Ch09Application                  : Starting Ch09Application using Java 17.0.8.1 with PID 12508 (C:\Users\Java\Desktop\workspace\Spring\Ch09\target\classes started by Java in C:\Users\Java\Desktop\workspace\Spring\Ch09)
+2023-10-05T11:43:47.014+09:00  INFO 12508 --- [restartedMain] kr.ch09.Ch09Application                  : No active profile set, falling back to 1 default profile: "default"
+2023-10-05T11:43:47.042+09:00  INFO 12508 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-05T11:43:47.042+09:00  INFO 12508 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-05T11:43:47.364+09:00  INFO 12508 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-05T11:43:47.389+09:00  INFO 12508 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interfaces.
+2023-10-05T11:43:47.451+09:00  WARN 12508 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.ch09]' package. Please check your configuration.
+2023-10-05T11:43:47.532+09:00  INFO 8964 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-05T11:43:47.536+09:00  INFO 8964 --- [Thread-105] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-05T11:43:47.538+09:00  INFO 8964 --- [Thread-105] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T11:43:47.538+09:00  INFO 8964 --- [Thread-105] com.zaxxer.hikari.HikariDataSource       : HikariPool-31 - Shutdown initiated...
+2023-10-05T11:43:47.643+09:00  INFO 8964 --- [Thread-105] com.zaxxer.hikari.HikariDataSource       : HikariPool-31 - Shutdown completed.
+2023-10-05T11:43:47.696+09:00  INFO 8964 --- [restartedMain] kr.ch09.Ch09Application                  : Starting Ch09Application using Java 17.0.8.1 with PID 8964 (C:\Users\Java\Desktop\workspace\Spring\Ch09\target\classes started by Java in C:\Users\Java\Desktop\workspace\Spring\Ch09)
+2023-10-05T11:43:47.696+09:00  INFO 8964 --- [restartedMain] kr.ch09.Ch09Application                  : No active profile set, falling back to 1 default profile: "default"
+2023-10-05T11:43:47.712+09:00  INFO 12508 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-05T11:43:47.719+09:00  INFO 12508 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-05T11:43:47.719+09:00  INFO 12508 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-05T11:43:47.757+09:00  INFO 12508 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/Ch09]   : Initializing Spring embedded WebApplicationContext
+2023-10-05T11:43:47.758+09:00  INFO 12508 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 715 ms
+2023-10-05T11:43:47.774+09:00  INFO 8964 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-05T11:43:47.777+09:00  INFO 8964 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JPA repository interfaces.
+2023-10-05T11:43:47.793+09:00  WARN 8964 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.ch09]' package. Please check your configuration.
+2023-10-05T11:43:47.817+09:00  INFO 8964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-05T11:43:47.817+09:00  INFO 8964 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-05T11:43:47.817+09:00  INFO 8964 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-05T11:43:47.827+09:00  INFO 8964 --- [restartedMain] o.a.c.c.C.[.[localhost].[/Ch09]          : Initializing Spring embedded WebApplicationContext
+2023-10-05T11:43:47.827+09:00  INFO 8964 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 131 ms
+2023-10-05T11:43:47.840+09:00  INFO 12508 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-05T11:43:47.841+09:00  INFO 8964 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-05T11:43:47.844+09:00  INFO 8964 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T11:43:47.844+09:00  INFO 8964 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-05T11:43:47.844+09:00  INFO 8964 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Starting...
+2023-10-05T11:43:47.864+09:00  INFO 12508 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-05T11:43:47.865+09:00  INFO 12508 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-05T11:43:47.941+09:00  INFO 12508 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T11:43:47.966+09:00  INFO 8964 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-32 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e95eb54
+2023-10-05T11:43:47.966+09:00  INFO 8964 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Start completed.
+2023-10-05T11:43:47.967+09:00  WARN 8964 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-10-05T11:43:47.970+09:00  INFO 8964 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T11:43:47.980+09:00  INFO 8964 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-05T11:43:48.010+09:00  INFO 8964 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T11:43:48.017+09:00  INFO 12508 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-05T11:43:48.026+09:00  INFO 12508 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-05T11:43:48.039+09:00  WARN 8964 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-05T11:43:48.046+09:00  INFO 8964 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-05T11:43:48.069+09:00  INFO 8964 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@31944fae, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7f41daec, org.springframework.security.web.context.SecurityContextHolderFilter@443c654f, org.springframework.security.web.header.HeaderWriterFilter@d72cc25, org.springframework.security.web.authentication.logout.LogoutFilter@1fab5dff, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7495b066, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3871e624, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2312b21d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@215a3515, org.springframework.security.web.access.ExceptionTranslationFilter@19a05b0c, org.springframework.security.web.access.intercept.AuthorizationFilter@1e6805b4]
+2023-10-05T11:43:48.091+09:00  INFO 8964 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-05T11:43:48.097+09:00  INFO 8964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/Ch09'
+2023-10-05T11:43:48.099+09:00  INFO 8964 --- [restartedMain] kr.ch09.Ch09Application                  : Started Ch09Application in 0.413 seconds (process running for 8091.386)
+2023-10-05T11:43:48.099+09:00  INFO 8964 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-10-05T11:43:48.276+09:00  INFO 12508 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@547073f7
+2023-10-05T11:43:48.278+09:00  INFO 12508 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-05T11:43:48.314+09:00  WARN 12508 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-10-05T11:43:48.420+09:00  INFO 12508 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T11:43:48.736+09:00  INFO 12508 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-05T11:43:48.788+09:00  INFO 12508 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T11:43:48.962+09:00  WARN 12508 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-05T11:43:49.018+09:00  INFO 12508 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-05T11:43:49.097+09:00  INFO 12508 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@293e5e1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@11a868ad, org.springframework.security.web.context.SecurityContextHolderFilter@7fc92315, org.springframework.security.web.header.HeaderWriterFilter@563abcc1, org.springframework.security.web.authentication.logout.LogoutFilter@27a4ae9f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3c45edab, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6dc094b5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@423d2396, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@48a00ec3, org.springframework.security.web.access.ExceptionTranslationFilter@4e1d5510, org.springframework.security.web.access.intercept.AuthorizationFilter@2689c19b]
+2023-10-05T11:43:49.230+09:00  WARN 12508 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-10-05T11:43:49.240+09:00  WARN 12508 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2023-10-05T11:43:49.241+09:00  INFO 12508 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T11:43:49.243+09:00  INFO 12508 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-05T11:43:49.371+09:00  INFO 12508 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-05T11:43:49.372+09:00  INFO 12508 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-05T11:43:49.380+09:00  INFO 12508 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-10-05T11:43:49.393+09:00 ERROR 12508 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2023-10-05T11:43:57.506+09:00  INFO 8964 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[localhost].[/Ch09]          : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-05T11:43:57.507+09:00  INFO 8964 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-05T11:43:57.507+09:00  INFO 8964 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-10-05T11:43:57.508+09:00 DEBUG 8964 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /
+2023-10-05T11:43:57.509+09:00 DEBUG 8964 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /
+2023-10-05T11:43:57.559+09:00 DEBUG 8964 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-10-05T11:44:06.180+09:00 DEBUG 8964 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /user/register
+2023-10-05T11:44:06.181+09:00 DEBUG 8964 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /user/register
+2023-10-05T11:44:06.185+09:00 DEBUG 8964 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-10-05T11:45:41.320+09:00 DEBUG 8964 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /user/register
+2023-10-05T11:45:41.321+09:00 DEBUG 8964 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /user/register
+2023-10-05T11:45:41.533+09:00 DEBUG 8964 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-10-05T11:45:41.536+09:00 DEBUG 8964 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /user/login
+2023-10-05T11:45:41.536+09:00 DEBUG 8964 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /user/login
+2023-10-05T11:45:41.538+09:00 DEBUG 8964 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-10-05T11:46:10.168+09:00 DEBUG 8964 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /user/register
+2023-10-05T11:46:10.170+09:00 DEBUG 8964 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /user/register
+2023-10-05T11:46:10.174+09:00 DEBUG 8964 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-10-05T11:46:20.253+09:00 DEBUG 8964 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /user/register
+2023-10-05T11:46:20.254+09:00 DEBUG 8964 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /user/register
+2023-10-05T11:46:20.388+09:00 DEBUG 8964 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-10-05T11:46:20.392+09:00 DEBUG 8964 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /user/login
+2023-10-05T11:46:20.393+09:00 DEBUG 8964 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /user/login
+2023-10-05T11:46:20.394+09:00 DEBUG 8964 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-10-05T11:46:26.108+09:00 DEBUG 8964 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /user/register
+2023-10-05T11:46:26.109+09:00 DEBUG 8964 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /user/register
+2023-10-05T11:46:26.113+09:00 DEBUG 8964 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-10-05T11:46:37.282+09:00 DEBUG 8964 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /user/register
+2023-10-05T11:46:37.284+09:00 DEBUG 8964 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /user/register
+2023-10-05T11:46:37.422+09:00 DEBUG 8964 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-10-05T11:46:37.425+09:00 DEBUG 8964 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /user/login
+2023-10-05T11:46:37.426+09:00 DEBUG 8964 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /user/login
+2023-10-05T11:46:37.428+09:00 DEBUG 8964 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-10-05T12:03:18.722+09:00  INFO 4772 --- [restartedMain] kr.ch09.Ch09Application                  : Starting Ch09Application using Java 17.0.8.1 with PID 4772 (C:\Users\Java\Desktop\workspace\Spring\Ch09\target\classes started by Java in C:\Users\Java\Desktop\workspace\Spring\Ch09)
+2023-10-05T12:03:18.723+09:00  INFO 4772 --- [restartedMain] kr.ch09.Ch09Application                  : No active profile set, falling back to 1 default profile: "default"
+2023-10-05T12:03:18.748+09:00  INFO 4772 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-05T12:03:18.749+09:00  INFO 4772 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-05T12:03:18.843+09:00  INFO 8964 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (1 addition, 0 deletions, 3 modifications)
+2023-10-05T12:03:18.848+09:00  INFO 8964 --- [Thread-109] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-05T12:03:18.848+09:00  INFO 8964 --- [Thread-109] o.a.c.c.C.[.[localhost].[/Ch09]          : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-10-05T12:03:18.850+09:00  INFO 8964 --- [Thread-109] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T12:03:18.851+09:00  INFO 8964 --- [Thread-109] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Shutdown initiated...
+2023-10-05T12:03:18.963+09:00  INFO 8964 --- [Thread-109] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Shutdown completed.
+2023-10-05T12:03:19.010+09:00  INFO 8964 --- [restartedMain] kr.ch09.Ch09Application                  : Starting Ch09Application using Java 17.0.8.1 with PID 8964 (C:\Users\Java\Desktop\workspace\Spring\Ch09\target\classes started by Java in C:\Users\Java\Desktop\workspace\Spring\Ch09)
+2023-10-05T12:03:19.010+09:00  INFO 8964 --- [restartedMain] kr.ch09.Ch09Application                  : No active profile set, falling back to 1 default profile: "default"
+2023-10-05T12:03:19.096+09:00  INFO 8964 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-05T12:03:19.101+09:00  INFO 8964 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 1 JPA repository interfaces.
+2023-10-05T12:03:19.120+09:00  WARN 8964 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.ch09]' package. Please check your configuration.
+2023-10-05T12:03:19.150+09:00  INFO 4772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-05T12:03:19.154+09:00  INFO 8964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-05T12:03:19.154+09:00  INFO 8964 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-05T12:03:19.154+09:00  INFO 8964 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-05T12:03:19.166+09:00  INFO 8964 --- [restartedMain] o.a.c.c.C.[.[localhost].[/Ch09]          : Initializing Spring embedded WebApplicationContext
+2023-10-05T12:03:19.166+09:00  INFO 8964 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 155 ms
+2023-10-05T12:03:19.185+09:00  INFO 4772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interfaces.
+2023-10-05T12:03:19.188+09:00  INFO 8964 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-05T12:03:19.192+09:00  INFO 8964 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T12:03:19.192+09:00  INFO 8964 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-05T12:03:19.192+09:00  INFO 8964 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Starting...
+2023-10-05T12:03:19.255+09:00  WARN 4772 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.ch09]' package. Please check your configuration.
+2023-10-05T12:03:19.315+09:00  INFO 8964 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-33 - Added connection com.mysql.cj.jdbc.ConnectionImpl@245d4ad9
+2023-10-05T12:03:19.316+09:00  INFO 8964 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Start completed.
+2023-10-05T12:03:19.316+09:00  WARN 8964 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-10-05T12:03:19.321+09:00  INFO 8964 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T12:03:19.333+09:00  INFO 8964 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-05T12:03:19.364+09:00  INFO 8964 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T12:03:19.404+09:00  WARN 8964 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-05T12:03:19.412+09:00  INFO 8964 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-05T12:03:19.443+09:00  INFO 8964 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7e93dfec, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3329faa0, org.springframework.security.web.context.SecurityContextHolderFilter@f89555d, org.springframework.security.web.header.HeaderWriterFilter@5d847a37, org.springframework.security.web.authentication.logout.LogoutFilter@1a3ee90b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2fa95d5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6bbd5657, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@207d0d04, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4da50841, org.springframework.security.web.access.ExceptionTranslationFilter@6b2415f9, org.springframework.security.web.access.intercept.AuthorizationFilter@4e461682]
+2023-10-05T12:03:19.500+09:00  INFO 8964 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-05T12:03:19.510+09:00  INFO 8964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/Ch09'
+2023-10-05T12:03:19.513+09:00  INFO 8964 --- [restartedMain] kr.ch09.Ch09Application                  : Started Ch09Application in 0.516 seconds (process running for 9262.8)
+2023-10-05T12:03:19.514+09:00  INFO 8964 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-10-05T12:03:19.582+09:00  INFO 4772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-05T12:03:19.589+09:00  INFO 4772 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-05T12:03:19.590+09:00  INFO 4772 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-05T12:03:19.636+09:00  INFO 4772 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/Ch09]   : Initializing Spring embedded WebApplicationContext
+2023-10-05T12:03:19.637+09:00  INFO 4772 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 888 ms
+2023-10-05T12:03:19.743+09:00  INFO 4772 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-05T12:03:19.774+09:00  INFO 4772 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-05T12:03:19.776+09:00  INFO 4772 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-05T12:03:19.873+09:00  INFO 4772 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T12:03:19.959+09:00  INFO 4772 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-05T12:03:19.969+09:00  INFO 4772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-05T12:03:20.215+09:00  INFO 4772 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e61df1e
+2023-10-05T12:03:20.218+09:00  INFO 4772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-05T12:03:20.256+09:00  WARN 4772 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-10-05T12:03:20.346+09:00  INFO 4772 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T12:03:20.664+09:00  INFO 4772 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-05T12:03:20.713+09:00  INFO 4772 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T12:03:20.878+09:00  WARN 4772 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-05T12:03:20.935+09:00  INFO 4772 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-05T12:03:21.013+09:00  INFO 4772 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@11a868ad, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48a00ec3, org.springframework.security.web.context.SecurityContextHolderFilter@7c165499, org.springframework.security.web.header.HeaderWriterFilter@482a8b6, org.springframework.security.web.authentication.logout.LogoutFilter@67d3aed3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2b7e55fe, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@532a0d3e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@417d9512, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5166cc7f, org.springframework.security.web.access.ExceptionTranslationFilter@77d51a1e, org.springframework.security.web.access.intercept.AuthorizationFilter@3c45edab]
+2023-10-05T12:03:21.151+09:00  WARN 4772 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-10-05T12:03:21.162+09:00  WARN 4772 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2023-10-05T12:03:21.163+09:00  INFO 4772 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T12:03:21.164+09:00  INFO 4772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-05T12:03:21.257+09:00  INFO 4772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-05T12:03:21.259+09:00  INFO 4772 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-05T12:03:21.266+09:00  INFO 4772 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-10-05T12:03:21.276+09:00 ERROR 4772 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2023-10-05T12:03:24.980+09:00  INFO 8964 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[localhost].[/Ch09]          : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-05T12:03:24.980+09:00  INFO 8964 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-05T12:03:24.981+09:00  INFO 8964 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-05T12:03:24.982+09:00 DEBUG 8964 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /user/login
+2023-10-05T12:03:24.983+09:00 DEBUG 8964 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /user/login
+2023-10-05T12:03:24.996+09:00 DEBUG 8964 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-10-05T12:03:25.930+09:00 DEBUG 8964 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /user/login
+2023-10-05T12:03:25.930+09:00 DEBUG 8964 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /user/login
+2023-10-05T12:03:25.933+09:00 DEBUG 8964 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-10-05T12:03:32.239+09:00 DEBUG 8964 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /user/login
+2023-10-05T12:03:32.447+09:00 DEBUG 8964 --- [http-nio-8080-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Failed to authenticate since password does not match stored value
+2023-10-05T12:03:32.632+09:00 DEBUG 8964 --- [http-nio-8080-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Failed to authenticate since password does not match stored value
+2023-10-05T12:03:32.633+09:00 DEBUG 8964 --- [http-nio-8080-exec-5] o.s.s.web.DefaultRedirectStrategy        : Redirecting to /Ch09/user/login?success=100
+2023-10-05T12:03:32.635+09:00 DEBUG 8964 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /user/login?success=100
+2023-10-05T12:03:32.636+09:00 DEBUG 8964 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /user/login?success=100
+2023-10-05T12:03:32.638+09:00 DEBUG 8964 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-10-05T12:03:35.179+09:00 DEBUG 8964 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /user/login?success=100
+2023-10-05T12:03:35.326+09:00 DEBUG 8964 --- [http-nio-8080-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-10-05T12:03:35.326+09:00 DEBUG 8964 --- [http-nio-8080-exec-7] .s.ChangeSessionIdAuthenticationStrategy : Changed session id from 07F680F0C4E05E5C4BB87F8C8989269B
+2023-10-05T12:03:35.328+09:00 DEBUG 8964 --- [http-nio-8080-exec-7] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=07F680F0C4E05E5C4BB87F8C8989269B], Granted Authorities=[ADMIN]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@6c4f2cb7]
+2023-10-05T12:03:35.328+09:00 DEBUG 8964 --- [http-nio-8080-exec-7] w.a.UsernamePasswordAuthenticationFilter : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=07F680F0C4E05E5C4BB87F8C8989269B], Granted Authorities=[ADMIN]]
+2023-10-05T12:03:35.328+09:00 DEBUG 8964 --- [http-nio-8080-exec-7] o.s.s.web.DefaultRedirectStrategy        : Redirecting to /Ch09/user/succss
+2023-10-05T12:03:35.331+09:00 DEBUG 8964 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /user/succss
+2023-10-05T12:03:35.333+09:00 DEBUG 8964 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /user/succss
+2023-10-05T12:03:35.335+09:00 DEBUG 8964 --- [http-nio-8080-exec-8] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=07F680F0C4E05E5C4BB87F8C8989269B], Granted Authorities=[ADMIN]]]
+2023-10-05T12:03:35.337+09:00 DEBUG 8964 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /error
+2023-10-05T12:03:35.338+09:00 DEBUG 8964 --- [http-nio-8080-exec-8] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=07F680F0C4E05E5C4BB87F8C8989269B], Granted Authorities=[ADMIN]]]
+2023-10-05T12:03:35.338+09:00 DEBUG 8964 --- [http-nio-8080-exec-8] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2023-10-05T12:03:38.246+09:00 DEBUG 8964 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /user/succss
+2023-10-05T12:03:38.248+09:00 DEBUG 8964 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /user/succss
+2023-10-05T12:03:38.250+09:00 DEBUG 8964 --- [http-nio-8080-exec-9] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=07F680F0C4E05E5C4BB87F8C8989269B], Granted Authorities=[ADMIN]]]
+2023-10-05T12:03:38.250+09:00 DEBUG 8964 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /error
+2023-10-05T12:03:38.252+09:00 DEBUG 8964 --- [http-nio-8080-exec-9] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=07F680F0C4E05E5C4BB87F8C8989269B], Granted Authorities=[ADMIN]]]
+2023-10-05T12:03:38.252+09:00 DEBUG 8964 --- [http-nio-8080-exec-9] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2023-10-05T12:03:38.702+09:00 DEBUG 8964 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /user/succss
+2023-10-05T12:03:38.705+09:00 DEBUG 8964 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /user/succss
+2023-10-05T12:03:38.707+09:00 DEBUG 8964 --- [http-nio-8080-exec-10] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=07F680F0C4E05E5C4BB87F8C8989269B], Granted Authorities=[ADMIN]]]
+2023-10-05T12:03:38.707+09:00 DEBUG 8964 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /error
+2023-10-05T12:03:38.709+09:00 DEBUG 8964 --- [http-nio-8080-exec-10] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=07F680F0C4E05E5C4BB87F8C8989269B], Granted Authorities=[ADMIN]]]
+2023-10-05T12:03:38.710+09:00 DEBUG 8964 --- [http-nio-8080-exec-10] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2023-10-05T12:03:54.599+09:00 DEBUG 8964 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /user/login
+2023-10-05T12:03:54.600+09:00 DEBUG 8964 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /user/login
+2023-10-05T12:03:54.602+09:00 DEBUG 8964 --- [http-nio-8080-exec-2] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=07F680F0C4E05E5C4BB87F8C8989269B], Granted Authorities=[ADMIN]]]
+2023-10-05T12:04:45.339+09:00 DEBUG 8964 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /user/login
+2023-10-05T12:04:45.477+09:00 DEBUG 8964 --- [http-nio-8080-exec-3] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-10-05T12:04:45.477+09:00 DEBUG 8964 --- [http-nio-8080-exec-3] .s.ChangeSessionIdAuthenticationStrategy : Changed session id from 579D51BB05E332C816B88C0096546193
+2023-10-05T12:04:45.478+09:00 DEBUG 8964 --- [http-nio-8080-exec-3] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=579D51BB05E332C816B88C0096546193], Granted Authorities=[ADMIN]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@6c4f2cb7]
+2023-10-05T12:04:45.478+09:00 DEBUG 8964 --- [http-nio-8080-exec-3] w.a.UsernamePasswordAuthenticationFilter : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=579D51BB05E332C816B88C0096546193], Granted Authorities=[ADMIN]]
+2023-10-05T12:04:45.478+09:00 DEBUG 8964 --- [http-nio-8080-exec-3] o.s.s.web.DefaultRedirectStrategy        : Redirecting to /Ch09/user/succss
+2023-10-05T12:04:45.479+09:00 DEBUG 8964 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /user/succss
+2023-10-05T12:04:45.480+09:00 DEBUG 8964 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /user/succss
+2023-10-05T12:04:45.483+09:00 DEBUG 8964 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=579D51BB05E332C816B88C0096546193], Granted Authorities=[ADMIN]]]
+2023-10-05T12:04:45.483+09:00 DEBUG 8964 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2023-10-05T12:04:45.483+09:00 DEBUG 8964 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=579D51BB05E332C816B88C0096546193], Granted Authorities=[ADMIN]]]
+2023-10-05T12:04:45.483+09:00 DEBUG 8964 --- [http-nio-8080-exec-4] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2023-10-05T12:04:50.375+09:00  INFO 8964 --- [RMI TCP Connection(160)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-10-05T12:04:50.378+09:00  INFO 8964 --- [RMI TCP Connection(160)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-05T12:04:50.378+09:00  INFO 8964 --- [RMI TCP Connection(160)-127.0.0.1] o.a.c.c.C.[.[localhost].[/Ch09]          : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-10-05T12:04:50.383+09:00  INFO 8964 --- [RMI TCP Connection(160)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T12:04:50.383+09:00  INFO 8964 --- [RMI TCP Connection(160)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Shutdown initiated...
+2023-10-05T12:04:50.485+09:00  INFO 8964 --- [RMI TCP Connection(160)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Shutdown completed.
+2023-10-05T12:04:58.011+09:00  INFO 15836 --- [restartedMain] kr.ch09.Ch09Application                  : Starting Ch09Application using Java 17.0.8.1 with PID 15836 (C:\Users\Java\Desktop\workspace\Spring\Ch09\target\classes started by Java in C:\Users\Java\Desktop\workspace\Spring\Ch09)
+2023-10-05T12:04:58.012+09:00  INFO 15836 --- [restartedMain] kr.ch09.Ch09Application                  : No active profile set, falling back to 1 default profile: "default"
+2023-10-05T12:04:58.034+09:00  INFO 15836 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-05T12:04:58.034+09:00  INFO 15836 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-05T12:04:58.362+09:00  INFO 15836 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-05T12:04:58.388+09:00  INFO 15836 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interfaces.
+2023-10-05T12:04:58.451+09:00  WARN 15836 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.ch09]' package. Please check your configuration.
+2023-10-05T12:04:58.693+09:00  INFO 15836 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-05T12:04:58.699+09:00  INFO 15836 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-05T12:04:58.699+09:00  INFO 15836 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-05T12:04:58.745+09:00  INFO 15836 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/Ch09]   : Initializing Spring embedded WebApplicationContext
+2023-10-05T12:04:58.745+09:00  INFO 15836 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 711 ms
+2023-10-05T12:04:58.854+09:00  INFO 15836 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-05T12:04:58.915+09:00  INFO 15836 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-05T12:04:58.924+09:00  INFO 15836 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-05T12:04:59.045+09:00  INFO 15836 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T12:04:59.128+09:00  INFO 15836 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-05T12:04:59.141+09:00  INFO 15836 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-05T12:04:59.403+09:00  INFO 15836 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1ed6825c
+2023-10-05T12:04:59.405+09:00  INFO 15836 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-05T12:04:59.438+09:00  WARN 15836 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-10-05T12:04:59.533+09:00  INFO 15836 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T12:04:59.849+09:00  INFO 15836 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-05T12:04:59.899+09:00  INFO 15836 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T12:05:00.069+09:00  WARN 15836 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-05T12:05:00.125+09:00  INFO 15836 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-05T12:05:00.211+09:00  INFO 15836 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3902c507, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@71070380, org.springframework.security.web.context.SecurityContextHolderFilter@5166cc7f, org.springframework.security.web.header.HeaderWriterFilter@293e5e1, org.springframework.security.web.authentication.logout.LogoutFilter@6523219b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2a6c443b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1ef8736a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c37578f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@259454b3, org.springframework.security.web.access.ExceptionTranslationFilter@2b7e55fe, org.springframework.security.web.access.intercept.AuthorizationFilter@bf9f71b]
+2023-10-05T12:05:00.357+09:00  INFO 15836 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-05T12:05:00.376+09:00  INFO 15836 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/Ch09'
+2023-10-05T12:05:00.381+09:00  INFO 15836 --- [restartedMain] kr.ch09.Ch09Application                  : Started Ch09Application in 2.562 seconds (process running for 2.923)
+2023-10-05T12:05:04.710+09:00  INFO 15836 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/Ch09]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-05T12:05:04.710+09:00  INFO 15836 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-05T12:05:04.711+09:00  INFO 15836 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-05T12:05:04.715+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /hello.do
+2023-10-05T12:05:04.727+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-10-05T12:05:04.743+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/Ch09/hello.do?continue to session
+2023-10-05T12:05:04.744+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/Ch09/user/login
+2023-10-05T12:05:04.747+09:00 DEBUG 15836 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /user/login
+2023-10-05T12:05:04.751+09:00 DEBUG 15836 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /user/login
+2023-10-05T12:05:04.845+09:00 DEBUG 15836 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-10-05T12:05:08.307+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /user/login
+2023-10-05T12:05:08.532+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-10-05T12:05:08.532+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] .s.ChangeSessionIdAuthenticationStrategy : Changed session id from EF374BA97B542A7AF5C2810D4DFCDB07
+2023-10-05T12:05:08.534+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=EF374BA97B542A7AF5C2810D4DFCDB07], Granted Authorities=[ADMIN]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@46f7d8df]
+2023-10-05T12:05:08.535+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] w.a.UsernamePasswordAuthenticationFilter : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=EF374BA97B542A7AF5C2810D4DFCDB07], Granted Authorities=[ADMIN]]
+2023-10-05T12:05:08.535+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/Ch09/hello.do?continue
+2023-10-05T12:05:08.537+09:00 DEBUG 15836 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /hello.do?continue
+2023-10-05T12:05:08.540+09:00 DEBUG 15836 --- [http-nio-8080-exec-5] o.s.s.w.s.HttpSessionRequestCache        : Loaded matching saved request http://localhost:8080/Ch09/hello.do?continue
+2023-10-05T12:05:08.542+09:00 DEBUG 15836 --- [http-nio-8080-exec-5] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=EF374BA97B542A7AF5C2810D4DFCDB07], Granted Authorities=[ADMIN]]]
+2023-10-05T12:05:08.542+09:00 DEBUG 15836 --- [http-nio-8080-exec-5] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2023-10-05T12:05:08.545+09:00 DEBUG 15836 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /error?continue
+2023-10-05T12:05:08.546+09:00 DEBUG 15836 --- [http-nio-8080-exec-5] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=EF374BA97B542A7AF5C2810D4DFCDB07], Granted Authorities=[ADMIN]]]
+2023-10-05T12:05:08.546+09:00 DEBUG 15836 --- [http-nio-8080-exec-5] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2023-10-05T12:05:18.084+09:00 DEBUG 15836 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /hello.do?continue
+2023-10-05T12:05:18.087+09:00 DEBUG 15836 --- [http-nio-8080-exec-6] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=EF374BA97B542A7AF5C2810D4DFCDB07], Granted Authorities=[ADMIN]]]
+2023-10-05T12:05:18.087+09:00 DEBUG 15836 --- [http-nio-8080-exec-6] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2023-10-05T12:05:18.087+09:00 DEBUG 15836 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error?continue
+2023-10-05T12:05:18.089+09:00 DEBUG 15836 --- [http-nio-8080-exec-6] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=EF374BA97B542A7AF5C2810D4DFCDB07], Granted Authorities=[ADMIN]]]
+2023-10-05T12:05:18.089+09:00 DEBUG 15836 --- [http-nio-8080-exec-6] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2023-10-05T12:05:18.573+09:00 DEBUG 15836 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /hello.do?continue
+2023-10-05T12:05:18.579+09:00 DEBUG 15836 --- [http-nio-8080-exec-7] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=EF374BA97B542A7AF5C2810D4DFCDB07], Granted Authorities=[ADMIN]]]
+2023-10-05T12:05:18.579+09:00 DEBUG 15836 --- [http-nio-8080-exec-7] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2023-10-05T12:05:18.580+09:00 DEBUG 15836 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /error?continue
+2023-10-05T12:05:18.582+09:00 DEBUG 15836 --- [http-nio-8080-exec-7] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=EF374BA97B542A7AF5C2810D4DFCDB07], Granted Authorities=[ADMIN]]]
+2023-10-05T12:05:18.582+09:00 DEBUG 15836 --- [http-nio-8080-exec-7] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2023-10-05T12:07:13.237+09:00  INFO 15836 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-05T12:07:13.245+09:00  INFO 15836 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-05T12:07:13.246+09:00  INFO 15836 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/Ch09]   : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-10-05T12:07:13.260+09:00  INFO 15836 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T12:07:13.263+09:00  INFO 15836 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-05T12:07:13.363+09:00  INFO 15836 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-05T12:07:13.406+09:00  INFO 15836 --- [restartedMain] kr.ch09.Ch09Application                  : Starting Ch09Application using Java 17.0.8.1 with PID 15836 (C:\Users\Java\Desktop\workspace\Spring\Ch09\target\classes started by Java in C:\Users\Java\Desktop\workspace\Spring\Ch09)
+2023-10-05T12:07:13.406+09:00  INFO 15836 --- [restartedMain] kr.ch09.Ch09Application                  : No active profile set, falling back to 1 default profile: "default"
+2023-10-05T12:07:13.501+09:00  INFO 15836 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-05T12:07:13.506+09:00  INFO 15836 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 1 JPA repository interfaces.
+2023-10-05T12:07:13.526+09:00  WARN 15836 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.ch09]' package. Please check your configuration.
+2023-10-05T12:07:13.556+09:00  INFO 15836 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-05T12:07:13.556+09:00  INFO 15836 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-05T12:07:13.556+09:00  INFO 15836 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-05T12:07:13.565+09:00  INFO 15836 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/Ch09]   : Initializing Spring embedded WebApplicationContext
+2023-10-05T12:07:13.566+09:00  INFO 15836 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 159 ms
+2023-10-05T12:07:13.588+09:00  INFO 15836 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-05T12:07:13.592+09:00  INFO 15836 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T12:07:13.592+09:00  INFO 15836 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-05T12:07:13.593+09:00  INFO 15836 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-10-05T12:07:13.704+09:00  INFO 15836 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13309826
+2023-10-05T12:07:13.705+09:00  INFO 15836 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-10-05T12:07:13.705+09:00  WARN 15836 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-10-05T12:07:13.711+09:00  INFO 15836 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T12:07:13.726+09:00  INFO 15836 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-05T12:07:13.756+09:00  INFO 15836 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T12:07:13.791+09:00  WARN 15836 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-05T12:07:13.798+09:00  INFO 15836 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-05T12:07:13.824+09:00  INFO 15836 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@14d36d99, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33ab19c5, org.springframework.security.web.context.SecurityContextHolderFilter@5e39914f, org.springframework.security.web.header.HeaderWriterFilter@56e4fdf9, org.springframework.security.web.authentication.logout.LogoutFilter@456550, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2a328a7c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@9d60b3c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a287cfc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1bcc9b9b, org.springframework.security.web.access.ExceptionTranslationFilter@51b053a1, org.springframework.security.web.access.intercept.AuthorizationFilter@2a905bf0]
+2023-10-05T12:07:13.855+09:00  INFO 15836 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-05T12:07:13.860+09:00  INFO 15836 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/Ch09'
+2023-10-05T12:07:13.862+09:00  INFO 15836 --- [restartedMain] kr.ch09.Ch09Application                  : Started Ch09Application in 0.471 seconds (process running for 136.404)
+2023-10-05T12:07:13.863+09:00  INFO 15836 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-10-05T12:07:20.641+09:00  INFO 15836 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/Ch09]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-05T12:07:20.641+09:00  INFO 15836 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-05T12:07:20.642+09:00  INFO 15836 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-05T12:07:20.642+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /hello.do?continue
+2023-10-05T12:07:20.647+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=EF374BA97B542A7AF5C2810D4DFCDB07], Granted Authorities=[ADMIN]]]
+2023-10-05T12:07:20.647+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2023-10-05T12:07:20.648+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error?continue
+2023-10-05T12:07:20.649+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=EF374BA97B542A7AF5C2810D4DFCDB07], Granted Authorities=[ADMIN]]]
+2023-10-05T12:07:20.650+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2023-10-05T12:07:21.401+09:00 DEBUG 15836 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /hello.do?continue
+2023-10-05T12:07:21.404+09:00 DEBUG 15836 --- [http-nio-8080-exec-3] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=EF374BA97B542A7AF5C2810D4DFCDB07], Granted Authorities=[ADMIN]]]
+2023-10-05T12:07:21.404+09:00 DEBUG 15836 --- [http-nio-8080-exec-3] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2023-10-05T12:07:21.404+09:00 DEBUG 15836 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error?continue
+2023-10-05T12:07:21.406+09:00 DEBUG 15836 --- [http-nio-8080-exec-3] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=EF374BA97B542A7AF5C2810D4DFCDB07], Granted Authorities=[ADMIN]]]
+2023-10-05T12:07:21.406+09:00 DEBUG 15836 --- [http-nio-8080-exec-3] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2023-10-05T12:07:22.334+09:00 DEBUG 15836 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /user/login
+2023-10-05T12:07:22.336+09:00 DEBUG 15836 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /user/login
+2023-10-05T12:07:22.353+09:00 DEBUG 15836 --- [http-nio-8080-exec-2] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=EF374BA97B542A7AF5C2810D4DFCDB07], Granted Authorities=[ADMIN]]]
+2023-10-05T12:07:22.841+09:00 DEBUG 15836 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /user/login
+2023-10-05T12:07:22.842+09:00 DEBUG 15836 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /user/login
+2023-10-05T12:07:22.845+09:00 DEBUG 15836 --- [http-nio-8080-exec-5] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=EF374BA97B542A7AF5C2810D4DFCDB07], Granted Authorities=[ADMIN]]]
+2023-10-05T12:07:23.049+09:00 DEBUG 15836 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /user/login
+2023-10-05T12:07:23.050+09:00 DEBUG 15836 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /user/login
+2023-10-05T12:07:23.053+09:00 DEBUG 15836 --- [http-nio-8080-exec-7] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=EF374BA97B542A7AF5C2810D4DFCDB07], Granted Authorities=[ADMIN]]]
+2023-10-05T12:07:23.249+09:00 DEBUG 15836 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /user/login
+2023-10-05T12:07:23.250+09:00 DEBUG 15836 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /user/login
+2023-10-05T12:07:23.254+09:00 DEBUG 15836 --- [http-nio-8080-exec-9] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=EF374BA97B542A7AF5C2810D4DFCDB07], Granted Authorities=[ADMIN]]]
+2023-10-05T12:07:23.390+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /user/login
+2023-10-05T12:07:23.390+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /user/login
+2023-10-05T12:07:23.392+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=EF374BA97B542A7AF5C2810D4DFCDB07], Granted Authorities=[ADMIN]]]
+2023-10-05T12:07:25.577+09:00 DEBUG 15836 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /user/login
+2023-10-05T12:07:25.790+09:00 DEBUG 15836 --- [http-nio-8080-exec-2] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-10-05T12:07:25.791+09:00 DEBUG 15836 --- [http-nio-8080-exec-2] .s.ChangeSessionIdAuthenticationStrategy : Changed session id from 37697D96A5EC44D1246B0EEC7226160F
+2023-10-05T12:07:25.791+09:00 DEBUG 15836 --- [http-nio-8080-exec-2] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=37697D96A5EC44D1246B0EEC7226160F], Granted Authorities=[ADMIN]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@64a298b7]
+2023-10-05T12:07:25.791+09:00 DEBUG 15836 --- [http-nio-8080-exec-2] w.a.UsernamePasswordAuthenticationFilter : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=37697D96A5EC44D1246B0EEC7226160F], Granted Authorities=[ADMIN]]
+2023-10-05T12:07:25.791+09:00 DEBUG 15836 --- [http-nio-8080-exec-2] o.s.s.web.DefaultRedirectStrategy        : Redirecting to /Ch09/user/success
+2023-10-05T12:07:25.793+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /user/success
+2023-10-05T12:07:25.793+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /user/success
+2023-10-05T12:07:25.831+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=37697D96A5EC44D1246B0EEC7226160F], Granted Authorities=[ADMIN]]]
+2023-10-05T12:31:47.885+09:00  INFO 5448 --- [restartedMain] kr.ch09.Ch09Application                  : Starting Ch09Application using Java 17.0.8.1 with PID 5448 (C:\Users\Java\Desktop\workspace\Spring\Ch09\target\classes started by Java in C:\Users\Java\Desktop\workspace\Spring\Ch09)
+2023-10-05T12:31:47.887+09:00  INFO 5448 --- [restartedMain] kr.ch09.Ch09Application                  : No active profile set, falling back to 1 default profile: "default"
+2023-10-05T12:31:47.911+09:00  INFO 5448 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-05T12:31:47.911+09:00  INFO 5448 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-05T12:31:48.238+09:00  INFO 5448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-05T12:31:48.266+09:00  INFO 5448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interfaces.
+2023-10-05T12:31:48.329+09:00  WARN 5448 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.ch09]' package. Please check your configuration.
+2023-10-05T12:31:48.571+09:00  INFO 5448 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-05T12:31:48.576+09:00  INFO 5448 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-05T12:31:48.576+09:00  INFO 5448 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-05T12:31:48.613+09:00  INFO 5448 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/Ch09]   : Initializing Spring embedded WebApplicationContext
+2023-10-05T12:31:48.613+09:00  INFO 5448 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 702 ms
+2023-10-05T12:31:48.644+09:00  INFO 15836 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2023-10-05T12:31:48.648+09:00  INFO 15836 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-05T12:31:48.649+09:00  INFO 15836 --- [Thread-7] o.a.c.c.C.[Tomcat].[localhost].[/Ch09]   : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-10-05T12:31:48.652+09:00  INFO 15836 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T12:31:48.653+09:00  INFO 15836 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-10-05T12:31:48.694+09:00  INFO 5448 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-05T12:31:48.719+09:00  INFO 5448 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-05T12:31:48.720+09:00  INFO 5448 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-05T12:31:48.757+09:00  INFO 15836 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-10-05T12:31:48.796+09:00  INFO 5448 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T12:31:48.796+09:00  INFO 15836 --- [restartedMain] kr.ch09.Ch09Application                  : Starting Ch09Application using Java 17.0.8.1 with PID 15836 (C:\Users\Java\Desktop\workspace\Spring\Ch09\target\classes started by Java in C:\Users\Java\Desktop\workspace\Spring\Ch09)
+2023-10-05T12:31:48.797+09:00  INFO 15836 --- [restartedMain] kr.ch09.Ch09Application                  : No active profile set, falling back to 1 default profile: "default"
+2023-10-05T12:31:48.870+09:00  INFO 5448 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-05T12:31:48.881+09:00  INFO 5448 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-05T12:31:48.888+09:00  INFO 15836 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-05T12:31:48.892+09:00  INFO 15836 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JPA repository interfaces.
+2023-10-05T12:31:48.912+09:00  WARN 15836 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.ch09]' package. Please check your configuration.
+2023-10-05T12:31:48.940+09:00  INFO 15836 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-05T12:31:48.941+09:00  INFO 15836 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-05T12:31:48.941+09:00  INFO 15836 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-05T12:31:48.950+09:00  INFO 15836 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/Ch09]   : Initializing Spring embedded WebApplicationContext
+2023-10-05T12:31:48.950+09:00  INFO 15836 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 152 ms
+2023-10-05T12:31:48.970+09:00  INFO 15836 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-05T12:31:48.974+09:00  INFO 15836 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T12:31:48.974+09:00  INFO 15836 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-05T12:31:48.975+09:00  INFO 15836 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-10-05T12:31:49.096+09:00  INFO 15836 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@24f57e0e
+2023-10-05T12:31:49.096+09:00  INFO 15836 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-10-05T12:31:49.096+09:00  WARN 15836 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-10-05T12:31:49.100+09:00  INFO 15836 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T12:31:49.112+09:00  INFO 15836 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-05T12:31:49.143+09:00  INFO 5448 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2ff2aa74
+2023-10-05T12:31:49.144+09:00  INFO 5448 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-05T12:31:49.158+09:00  INFO 15836 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T12:31:49.180+09:00  WARN 5448 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-10-05T12:31:49.190+09:00  WARN 15836 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-05T12:31:49.196+09:00  INFO 15836 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-05T12:31:49.221+09:00  INFO 15836 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@11d36a14, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@11580e19, org.springframework.security.web.context.SecurityContextHolderFilter@5220bdfb, org.springframework.security.web.header.HeaderWriterFilter@73c9cc20, org.springframework.security.web.authentication.logout.LogoutFilter@25a1cb8d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4ff9f0a4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28e5f880, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@488adf75, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@844af4c, org.springframework.security.web.access.ExceptionTranslationFilter@4ce58d44, org.springframework.security.web.access.intercept.AuthorizationFilter@23366d8]
+2023-10-05T12:31:49.250+09:00  INFO 15836 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-05T12:31:49.256+09:00  INFO 15836 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/Ch09'
+2023-10-05T12:31:49.258+09:00  INFO 15836 --- [restartedMain] kr.ch09.Ch09Application                  : Started Ch09Application in 0.475 seconds (process running for 1611.801)
+2023-10-05T12:31:49.259+09:00  INFO 15836 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-10-05T12:31:49.275+09:00  INFO 5448 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T12:31:49.590+09:00  INFO 5448 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-05T12:31:49.641+09:00  INFO 5448 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T12:31:49.811+09:00  WARN 5448 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-05T12:31:49.868+09:00  INFO 5448 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-05T12:31:49.948+09:00  INFO 5448 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1ceba548, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2689c19b, org.springframework.security.web.context.SecurityContextHolderFilter@4e1d5510, org.springframework.security.web.header.HeaderWriterFilter@4ace77ea, org.springframework.security.web.authentication.logout.LogoutFilter@5ec208d8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@36737f1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@563abcc1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7c165499, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3c45edab, org.springframework.security.web.access.ExceptionTranslationFilter@56a090d0, org.springframework.security.web.access.intercept.AuthorizationFilter@7938ab33]
+2023-10-05T12:31:50.092+09:00  WARN 5448 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-10-05T12:31:50.103+09:00  WARN 5448 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2023-10-05T12:31:50.104+09:00  INFO 5448 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T12:31:50.105+09:00  INFO 5448 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-05T12:31:50.196+09:00  INFO 5448 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-05T12:31:50.197+09:00  INFO 5448 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-05T12:31:50.205+09:00  INFO 5448 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-10-05T12:31:50.216+09:00 ERROR 5448 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2023-10-05T12:31:55.567+09:00  INFO 15836 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/Ch09]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-05T12:31:55.567+09:00  INFO 15836 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-05T12:31:55.568+09:00  INFO 15836 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-05T12:31:55.568+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /user/success
+2023-10-05T12:31:55.569+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /user/success
+2023-10-05T12:31:55.588+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=37697D96A5EC44D1246B0EEC7226160F], Granted Authorities=[ADMIN]]]
+2023-10-05T12:31:56.472+09:00 DEBUG 15836 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /user/success
+2023-10-05T12:31:56.473+09:00 DEBUG 15836 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /user/success
+2023-10-05T12:31:56.476+09:00 DEBUG 15836 --- [http-nio-8080-exec-3] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=37697D96A5EC44D1246B0EEC7226160F], Granted Authorities=[ADMIN]]]
+2023-10-05T12:31:56.710+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /user/success
+2023-10-05T12:31:56.710+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /user/success
+2023-10-05T12:31:56.711+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=37697D96A5EC44D1246B0EEC7226160F], Granted Authorities=[ADMIN]]]
+2023-10-05T12:31:56.863+09:00 DEBUG 15836 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /user/success
+2023-10-05T12:31:56.864+09:00 DEBUG 15836 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /user/success
+2023-10-05T12:31:56.867+09:00 DEBUG 15836 --- [http-nio-8080-exec-7] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=37697D96A5EC44D1246B0EEC7226160F], Granted Authorities=[ADMIN]]]
+2023-10-05T12:31:57.022+09:00 DEBUG 15836 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /user/success
+2023-10-05T12:31:57.023+09:00 DEBUG 15836 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /user/success
+2023-10-05T12:31:57.026+09:00 DEBUG 15836 --- [http-nio-8080-exec-9] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=37697D96A5EC44D1246B0EEC7226160F], Granted Authorities=[ADMIN]]]
+2023-10-05T12:32:01.455+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /
+2023-10-05T12:32:01.456+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /
+2023-10-05T12:32:01.458+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=37697D96A5EC44D1246B0EEC7226160F], Granted Authorities=[ADMIN]]]
+2023-10-05T12:32:58.265+09:00 DEBUG 15836 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /user/logout
+2023-10-05T12:32:58.266+09:00 DEBUG 15836 --- [http-nio-8080-exec-3] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=37697D96A5EC44D1246B0EEC7226160F], Granted Authorities=[ADMIN]]]
+2023-10-05T12:32:58.266+09:00 DEBUG 15836 --- [http-nio-8080-exec-3] o.s.s.w.a.logout.LogoutFilter            : Logging out [UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=37697D96A5EC44D1246B0EEC7226160F], Granted Authorities=[ADMIN]]]
+2023-10-05T12:32:58.267+09:00 DEBUG 15836 --- [http-nio-8080-exec-3] o.s.s.w.a.l.SecurityContextLogoutHandler : Invalidated session 9B4ABBE8AC2EB1B9B86DFE833D9896B9
+2023-10-05T12:32:58.267+09:00 DEBUG 15836 --- [http-nio-8080-exec-3] o.s.s.web.DefaultRedirectStrategy        : Redirecting to /Ch09/user/login?success=200
+2023-10-05T12:32:58.270+09:00 DEBUG 15836 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /user/login?success=200
+2023-10-05T12:32:58.270+09:00 DEBUG 15836 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /user/login?success=200
+2023-10-05T12:32:58.273+09:00 DEBUG 15836 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-10-05T12:33:01.440+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /user/login?success=200
+2023-10-05T12:33:01.653+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-10-05T12:33:01.653+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ADMIN]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@6d4d3e08]
+2023-10-05T12:33:01.654+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] w.a.UsernamePasswordAuthenticationFilter : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ADMIN]]
+2023-10-05T12:33:01.654+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] o.s.s.web.DefaultRedirectStrategy        : Redirecting to /Ch09/user/success
+2023-10-05T12:33:01.655+09:00 DEBUG 15836 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /user/success
+2023-10-05T12:33:01.656+09:00 DEBUG 15836 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /user/success
+2023-10-05T12:33:01.657+09:00 DEBUG 15836 --- [http-nio-8080-exec-6] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ADMIN]]]
+2023-10-05T12:33:03.007+09:00 DEBUG 15836 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /
+2023-10-05T12:33:03.007+09:00 DEBUG 15836 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /
+2023-10-05T12:33:03.010+09:00 DEBUG 15836 --- [http-nio-8080-exec-7] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ADMIN]]]
+2023-10-05T12:38:54.440+09:00  INFO 15836 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-05T12:38:54.448+09:00  INFO 15836 --- [Thread-11] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-05T12:38:54.448+09:00  INFO 15836 --- [Thread-11] o.a.c.c.C.[Tomcat].[localhost].[/Ch09]   : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-10-05T12:38:54.452+09:00  INFO 15836 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T12:38:54.452+09:00  INFO 15836 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-10-05T12:38:54.562+09:00  INFO 15836 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2023-10-05T12:38:54.603+09:00  INFO 15836 --- [restartedMain] kr.ch09.Ch09Application                  : Starting Ch09Application using Java 17.0.8.1 with PID 15836 (C:\Users\Java\Desktop\workspace\Spring\Ch09\target\classes started by Java in C:\Users\Java\Desktop\workspace\Spring\Ch09)
+2023-10-05T12:38:54.604+09:00  INFO 15836 --- [restartedMain] kr.ch09.Ch09Application                  : No active profile set, falling back to 1 default profile: "default"
+2023-10-05T12:38:54.677+09:00  INFO 15836 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-05T12:38:54.680+09:00  INFO 15836 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JPA repository interfaces.
+2023-10-05T12:38:54.695+09:00  WARN 15836 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.ch09]' package. Please check your configuration.
+2023-10-05T12:38:54.719+09:00  INFO 15836 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-05T12:38:54.719+09:00  INFO 15836 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-05T12:38:54.719+09:00  INFO 15836 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-05T12:38:54.728+09:00  INFO 15836 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/Ch09]   : Initializing Spring embedded WebApplicationContext
+2023-10-05T12:38:54.728+09:00  INFO 15836 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 124 ms
+2023-10-05T12:38:54.745+09:00  INFO 15836 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-05T12:38:54.748+09:00  INFO 15836 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T12:38:54.748+09:00  INFO 15836 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-05T12:38:54.748+09:00  INFO 15836 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-10-05T12:38:54.863+09:00  INFO 15836 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@65c52c87
+2023-10-05T12:38:54.863+09:00  INFO 15836 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-10-05T12:38:54.864+09:00  WARN 15836 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-10-05T12:38:54.868+09:00  INFO 15836 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T12:38:54.875+09:00  INFO 15836 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-05T12:38:54.905+09:00  INFO 15836 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T12:38:54.937+09:00  WARN 15836 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-05T12:38:54.943+09:00  INFO 15836 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-05T12:38:54.963+09:00  INFO 15836 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@261f69cd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@212374f5, org.springframework.security.web.context.SecurityContextHolderFilter@657946, org.springframework.security.web.header.HeaderWriterFilter@7126e798, org.springframework.security.web.authentication.logout.LogoutFilter@693087b2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4b7f6a07, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@79df90e5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4e854c9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@22e9047d, org.springframework.security.web.access.ExceptionTranslationFilter@6842b116, org.springframework.security.web.access.intercept.AuthorizationFilter@2a652581]
+2023-10-05T12:38:54.984+09:00  INFO 15836 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-05T12:38:54.990+09:00  INFO 15836 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/Ch09'
+2023-10-05T12:38:54.992+09:00  INFO 15836 --- [restartedMain] kr.ch09.Ch09Application                  : Started Ch09Application in 0.399 seconds (process running for 2037.534)
+2023-10-05T12:38:54.992+09:00  INFO 15836 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-10-05T12:40:24.606+09:00  INFO 15836 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-05T12:40:24.611+09:00  INFO 15836 --- [Thread-15] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-05T12:40:24.615+09:00  INFO 15836 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T12:40:24.616+09:00  INFO 15836 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2023-10-05T12:40:24.721+09:00  INFO 15836 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2023-10-05T12:40:24.763+09:00  INFO 15836 --- [restartedMain] kr.ch09.Ch09Application                  : Starting Ch09Application using Java 17.0.8.1 with PID 15836 (C:\Users\Java\Desktop\workspace\Spring\Ch09\target\classes started by Java in C:\Users\Java\Desktop\workspace\Spring\Ch09)
+2023-10-05T12:40:24.763+09:00  INFO 15836 --- [restartedMain] kr.ch09.Ch09Application                  : No active profile set, falling back to 1 default profile: "default"
+2023-10-05T12:40:24.836+09:00  INFO 15836 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-05T12:40:24.839+09:00  INFO 15836 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JPA repository interfaces.
+2023-10-05T12:40:24.854+09:00  WARN 15836 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.ch09]' package. Please check your configuration.
+2023-10-05T12:40:24.877+09:00  INFO 15836 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-05T12:40:24.877+09:00  INFO 15836 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-05T12:40:24.877+09:00  INFO 15836 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-05T12:40:24.886+09:00  INFO 15836 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/Ch09]   : Initializing Spring embedded WebApplicationContext
+2023-10-05T12:40:24.886+09:00  INFO 15836 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 122 ms
+2023-10-05T12:40:24.903+09:00  INFO 15836 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-05T12:40:24.906+09:00  INFO 15836 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T12:40:24.906+09:00  INFO 15836 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-05T12:40:24.906+09:00  INFO 15836 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2023-10-05T12:40:25.018+09:00  INFO 15836 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61bccdd5
+2023-10-05T12:40:25.018+09:00  INFO 15836 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2023-10-05T12:40:25.018+09:00  WARN 15836 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-10-05T12:40:25.021+09:00  INFO 15836 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-05T12:40:25.030+09:00  INFO 15836 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-05T12:40:25.058+09:00  INFO 15836 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T12:40:25.085+09:00  WARN 15836 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-05T12:40:25.091+09:00  INFO 15836 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-05T12:40:25.111+09:00  INFO 15836 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@465f0c7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@75488345, org.springframework.security.web.context.SecurityContextHolderFilter@745d7a7a, org.springframework.security.web.header.HeaderWriterFilter@44e9d136, org.springframework.security.web.authentication.logout.LogoutFilter@2d85e0a6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6e7b06d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@220a6364, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@387ed47c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5531b974, org.springframework.security.web.access.ExceptionTranslationFilter@d82fd84, org.springframework.security.web.access.intercept.AuthorizationFilter@12f655e5]
+2023-10-05T12:40:25.131+09:00  INFO 15836 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-05T12:40:25.137+09:00  INFO 15836 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/Ch09'
+2023-10-05T12:40:25.139+09:00  INFO 15836 --- [restartedMain] kr.ch09.Ch09Application                  : Started Ch09Application in 0.386 seconds (process running for 2127.681)
+2023-10-05T12:40:25.139+09:00  INFO 15836 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-10-05T12:40:33.648+09:00  INFO 15836 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/Ch09]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-05T12:40:33.648+09:00  INFO 15836 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-05T12:40:33.649+09:00  INFO 15836 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-05T12:40:33.649+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /
+2023-10-05T12:40:33.650+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /
+2023-10-05T12:40:33.665+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ADMIN]]]
+2023-10-05T12:40:34.736+09:00 DEBUG 15836 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /user/logout
+2023-10-05T12:40:34.736+09:00 DEBUG 15836 --- [http-nio-8080-exec-6] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ADMIN]]]
+2023-10-05T12:40:34.736+09:00 DEBUG 15836 --- [http-nio-8080-exec-6] o.s.s.w.a.logout.LogoutFilter            : Logging out [UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ADMIN]]]
+2023-10-05T12:40:34.737+09:00 DEBUG 15836 --- [http-nio-8080-exec-6] o.s.s.w.a.l.SecurityContextLogoutHandler : Invalidated session 450E9EFC27254CC1C3673A7BD250F98D
+2023-10-05T12:40:34.737+09:00 DEBUG 15836 --- [http-nio-8080-exec-6] o.s.s.web.DefaultRedirectStrategy        : Redirecting to /Ch09/user/login?success=200
+2023-10-05T12:40:34.740+09:00 DEBUG 15836 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /user/login?success=200
+2023-10-05T12:40:34.740+09:00 DEBUG 15836 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /user/login?success=200
+2023-10-05T12:40:34.743+09:00 DEBUG 15836 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-10-05T12:40:35.834+09:00 DEBUG 15836 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /user/login?success=200
+2023-10-05T12:40:35.835+09:00 DEBUG 15836 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /user/login?success=200
+2023-10-05T12:40:35.837+09:00 DEBUG 15836 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-10-05T12:40:37.068+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /user/login?success=200
+2023-10-05T12:40:37.069+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /user/login?success=200
+2023-10-05T12:40:37.071+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-10-05T12:40:37.913+09:00 DEBUG 15836 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /user/login?success=200
+2023-10-05T12:40:37.914+09:00 DEBUG 15836 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /user/login?success=200
+2023-10-05T12:40:37.917+09:00 DEBUG 15836 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-10-05T12:40:38.198+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /user/login?success=200
+2023-10-05T12:40:38.198+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /user/login?success=200
+2023-10-05T12:40:38.199+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-10-05T12:40:38.409+09:00 DEBUG 15836 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /user/login?success=200
+2023-10-05T12:40:38.410+09:00 DEBUG 15836 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /user/login?success=200
+2023-10-05T12:40:38.412+09:00 DEBUG 15836 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-10-05T12:40:38.598+09:00 DEBUG 15836 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /user/login?success=200
+2023-10-05T12:40:38.599+09:00 DEBUG 15836 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /user/login?success=200
+2023-10-05T12:40:38.600+09:00 DEBUG 15836 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-10-05T12:40:42.456+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /user/login?success=200
+2023-10-05T12:40:42.670+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-10-05T12:40:42.670+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a102, pass=$2a$10$esJvejhfI0tcjytRshyd5e6tZndNM6npSFeM52u1z8romzJagIwU6, name=김춘추, age=22, hp=010-1234-1002, role=MANAGER, regDate=2023-10-05T11:46:20.348783), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[MANAGER]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@64a3278c]
+2023-10-05T12:40:42.670+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] w.a.UsernamePasswordAuthenticationFilter : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a102, pass=$2a$10$esJvejhfI0tcjytRshyd5e6tZndNM6npSFeM52u1z8romzJagIwU6, name=김춘추, age=22, hp=010-1234-1002, role=MANAGER, regDate=2023-10-05T11:46:20.348783), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[MANAGER]]
+2023-10-05T12:40:42.673+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] o.s.s.web.DefaultRedirectStrategy        : Redirecting to /Ch09/user/success
+2023-10-05T12:40:42.676+09:00 DEBUG 15836 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /user/success
+2023-10-05T12:40:42.676+09:00 DEBUG 15836 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /user/success
+2023-10-05T12:40:42.678+09:00 DEBUG 15836 --- [http-nio-8080-exec-5] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a102, pass=$2a$10$esJvejhfI0tcjytRshyd5e6tZndNM6npSFeM52u1z8romzJagIwU6, name=김춘추, age=22, hp=010-1234-1002, role=MANAGER, regDate=2023-10-05T11:46:20.348783), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[MANAGER]]]
+2023-10-05T12:40:44.988+09:00 DEBUG 15836 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /
+2023-10-05T12:40:44.990+09:00 DEBUG 15836 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /
+2023-10-05T12:40:44.992+09:00 DEBUG 15836 --- [http-nio-8080-exec-9] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a102, pass=$2a$10$esJvejhfI0tcjytRshyd5e6tZndNM6npSFeM52u1z8romzJagIwU6, name=김춘추, age=22, hp=010-1234-1002, role=MANAGER, regDate=2023-10-05T11:46:20.348783), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[MANAGER]]]
+2023-10-05T12:40:46.721+09:00 DEBUG 15836 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /manager/index
+2023-10-05T12:40:46.722+09:00 DEBUG 15836 --- [http-nio-8080-exec-10] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a102, pass=$2a$10$esJvejhfI0tcjytRshyd5e6tZndNM6npSFeM52u1z8romzJagIwU6, name=김춘추, age=22, hp=010-1234-1002, role=MANAGER, regDate=2023-10-05T11:46:20.348783), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[MANAGER]]]
+2023-10-05T12:40:46.723+09:00 DEBUG 15836 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /manager/index
+2023-10-05T12:40:49.697+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /
+2023-10-05T12:40:49.698+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /
+2023-10-05T12:40:49.702+09:00 DEBUG 15836 --- [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a102, pass=$2a$10$esJvejhfI0tcjytRshyd5e6tZndNM6npSFeM52u1z8romzJagIwU6, name=김춘추, age=22, hp=010-1234-1002, role=MANAGER, regDate=2023-10-05T11:46:20.348783), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[MANAGER]]]
+2023-10-05T12:40:51.326+09:00 DEBUG 15836 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /user/logout
+2023-10-05T12:40:51.326+09:00 DEBUG 15836 --- [http-nio-8080-exec-2] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a102, pass=$2a$10$esJvejhfI0tcjytRshyd5e6tZndNM6npSFeM52u1z8romzJagIwU6, name=김춘추, age=22, hp=010-1234-1002, role=MANAGER, regDate=2023-10-05T11:46:20.348783), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[MANAGER]]]
+2023-10-05T12:40:51.326+09:00 DEBUG 15836 --- [http-nio-8080-exec-2] o.s.s.w.a.logout.LogoutFilter            : Logging out [UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a102, pass=$2a$10$esJvejhfI0tcjytRshyd5e6tZndNM6npSFeM52u1z8romzJagIwU6, name=김춘추, age=22, hp=010-1234-1002, role=MANAGER, regDate=2023-10-05T11:46:20.348783), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[MANAGER]]]
+2023-10-05T12:40:51.326+09:00 DEBUG 15836 --- [http-nio-8080-exec-2] o.s.s.w.a.l.SecurityContextLogoutHandler : Invalidated session 894ED57D5D56911F2268096F57A26FD0
+2023-10-05T12:40:51.326+09:00 DEBUG 15836 --- [http-nio-8080-exec-2] o.s.s.web.DefaultRedirectStrategy        : Redirecting to /Ch09/user/login?success=200
+2023-10-05T12:40:51.329+09:00 DEBUG 15836 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /user/login?success=200
+2023-10-05T12:40:51.330+09:00 DEBUG 15836 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /user/login?success=200
+2023-10-05T12:40:51.332+09:00 DEBUG 15836 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-10-05T12:40:53.459+09:00 DEBUG 15836 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /user/login?success=200
+2023-10-05T12:40:53.590+09:00 DEBUG 15836 --- [http-nio-8080-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-10-05T12:40:53.591+09:00 DEBUG 15836 --- [http-nio-8080-exec-7] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ADMIN]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@3582e0cf]
+2023-10-05T12:40:53.591+09:00 DEBUG 15836 --- [http-nio-8080-exec-7] w.a.UsernamePasswordAuthenticationFilter : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ADMIN]]
+2023-10-05T12:40:53.591+09:00 DEBUG 15836 --- [http-nio-8080-exec-7] o.s.s.web.DefaultRedirectStrategy        : Redirecting to /Ch09/user/success
+2023-10-05T12:40:53.593+09:00 DEBUG 15836 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /user/success
+2023-10-05T12:40:53.593+09:00 DEBUG 15836 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /user/success
+2023-10-05T12:40:53.594+09:00 DEBUG 15836 --- [http-nio-8080-exec-3] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ADMIN]]]
+2023-10-05T12:40:54.917+09:00 DEBUG 15836 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /
+2023-10-05T12:40:54.917+09:00 DEBUG 15836 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /
+2023-10-05T12:40:54.920+09:00 DEBUG 15836 --- [http-nio-8080-exec-8] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ADMIN]]]
+2023-10-05T12:40:56.444+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /admin/index
+2023-10-05T12:40:56.444+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ADMIN]]]
+2023-10-05T12:40:56.444+09:00 DEBUG 15836 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /admin/index
+2023-10-05T12:40:57.833+09:00 DEBUG 15836 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /
+2023-10-05T12:40:57.834+09:00 DEBUG 15836 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /
+2023-10-05T12:40:57.836+09:00 DEBUG 15836 --- [http-nio-8080-exec-5] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ADMIN]]]
+2023-10-05T12:40:58.583+09:00 DEBUG 15836 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /user/logout
+2023-10-05T12:40:58.583+09:00 DEBUG 15836 --- [http-nio-8080-exec-9] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ADMIN]]]
+2023-10-05T12:40:58.583+09:00 DEBUG 15836 --- [http-nio-8080-exec-9] o.s.s.w.a.logout.LogoutFilter            : Logging out [UsernamePasswordAuthenticationToken [Principal=MyUserDetails(uid=a101, pass=$2a$10$vHkaXOJUzcMNPrvTXsU60uKm/URB3cRf3qd3WsbrylKGe6hepO2G2, name=김유신, age=21, hp=010-1234-1001, role=ADMIN, regDate=2023-10-05T11:45:41.476147), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ADMIN]]]
+2023-10-05T12:40:58.583+09:00 DEBUG 15836 --- [http-nio-8080-exec-9] o.s.s.w.a.l.SecurityContextLogoutHandler : Invalidated session 536C475D47DA891D0478047E93C8F4B6
+2023-10-05T12:40:58.583+09:00 DEBUG 15836 --- [http-nio-8080-exec-9] o.s.s.web.DefaultRedirectStrategy        : Redirecting to /Ch09/user/login?success=200
+2023-10-05T12:40:58.586+09:00 DEBUG 15836 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /user/login?success=200
+2023-10-05T12:40:58.586+09:00 DEBUG 15836 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /user/login?success=200
+2023-10-05T12:40:58.588+09:00 DEBUG 15836 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-10-05T17:12:29.075+09:00  INFO 15836 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-05T17:12:29.081+09:00  INFO 15836 --- [Thread-19] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-05T17:12:29.081+09:00  INFO 15836 --- [Thread-19] o.a.c.c.C.[Tomcat].[localhost].[/Ch09]   : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-10-05T17:12:29.084+09:00  INFO 15836 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-05T17:12:29.084+09:00  INFO 15836 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2023-10-05T17:12:29.189+09:00  INFO 15836 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
