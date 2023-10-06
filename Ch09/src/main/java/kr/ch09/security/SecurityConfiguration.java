@@ -24,8 +24,8 @@ public class SecurityConfiguration {
 				authorizeHttpRequests ->
 				authorizeHttpRequests
 					.requestMatchers("/").permitAll() // index는 모두한테 허가
-					.requestMatchers("/admin/**").hasAuthority("ADMIN") // admin 쪽은 ADMIN한테만
-					.requestMatchers("/manager/**").hasAnyAuthority("ADMIN", "MANAGER") // manager 쪽은 ADMIN이랑 MANAGER한테만
+					.requestMatchers("/admin/**").hasRole("ADMIN") // admin 쪽은 ADMIN한테만 / Authority에서 Role로 수정
+					.requestMatchers("/manager/**").hasAnyRole("ADMIN", "MANAGER") // manager 쪽은 ADMIN이랑 MANAGER한테만
 					.requestMatchers("/user/**").permitAll()
 				);
 		
