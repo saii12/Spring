@@ -27,7 +27,7 @@ public class User1Entity {
 	private String hp;
 	private int age;
 	
-	// DTO 변환 메서드
+	// DTO 변환 메서드 / DTO로 변환할 때 그 때 DTO의 속성을 지정해주는 것
 		public User1DTO toDTO() {
 			
 			return User1DTO.builder()

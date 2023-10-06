@@ -17,13 +17,14 @@ public class User1Service {
 	@Autowired
 	private User1Repository repo;
 	
+	// CRD 메서드 dto가 매개변수로!
 	public void insertUser1(User1DTO dto) {
 		// DTO를 Entity로 변환
 		User1Entity entity = dto.toEntity();
 		
 		repo.save(entity);
 	}
-	
+	 
 	public User1DTO selectUser1(String uid) {
 		
 		Optional<User1Entity> result = repo.findById(uid);
