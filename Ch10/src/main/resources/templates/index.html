@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Ch10::index</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!--라이브러리는 하나의 스크립트태그안에서 작성되어야하고, 내가 작성한 스크립트는 또 하나의 스크립트 태그안에서 해야지!!! -->
+		<script th:src="@{/js/user1.js}"></script> <!-- js 폴더 src/main/resources/static 폴더 안에 들어가야함 -->
+		<script th:src="@{/js/user2.js}"></script>
+		<script th:src="@{/js/user3.js}"></script>
+		
+			
+		
+		
+	</head>
+	<body>
+		<h3>Ch10.Spring REST API</h3>
+		
+		
+		<!--
+			GET : 		/user1
+			GET :		/user1/{id}
+			POST : 		/user1
+			PUT : 		/user1
+			DELETE : 	/user1/{id}
+		-->	
+		<h4>User1</h4>
+		<h5>API 실습</h5>
+		<button id="btnUser1s">목록</button>
+		<button id="btnUser1">조회</button>
+		<button id="btnUser1Register">등록</button>
+		<button id="btnUser1Modify">수정</button>
+		<button id="btnUser1Delete">삭제</button>
+		
+		<h5>CRUD 실습</h5>
+		<a th:href="@{/user1/list}">목록</a>
+		<a th:href="@{/user1/register}">등록</a>
+		
+		<h4>User2</h4>
+		<button id="btnUser2s">목록</button>
+		<button id="btnUser2">조회</button>
+		<button id="btnUser2Register">등록</button>
+		<button id="btnUser2Modify">수정</button>
+		<button id="btnUser2Delete">삭제</button>
+		
+		<h4>User3</h4>
+		<button id="btnUser3s">목록</button>
+		<button id="btnUser3">조회</button>
+		<button id="btnUser3Register">등록</button>
+		<button id="btnUser3Modify">수정</button>
+		<button id="btnUser3Delete">삭제</button>
+	
+	</body>
+</html>

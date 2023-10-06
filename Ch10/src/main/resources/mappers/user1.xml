@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.ch10.mapper.User1Mapper">
+
+	<insert id="insertUser1">
+		INSERT INTO USER1 VALUES (#{id}, #{name}, #{hp}, #{age}) <!-- dao에서 insertUser1 매개변수 dto의 속성값이 파라미터가 된다. -->
+	</insert>
+
+	<select id="selectUser1" resultType="kr.ch10.dto.User1DTO">
+		SELECT * FROM USER1 WHERE id=#{id} <!-- oracle DB 연결되어 있으므로 백틱 안쓴다, 쿼리문 마지막 세미콜른도 빼야한다 -->
+	</select>
+
+	<select id="selectUser1s" resultType="kr.ch10.dto.User1DTO"> <!-- select는 DB에서 받아오는 거라서 resultType을 추가해줘야한다. -->
+		SELECT * FROM USER1
+	</select>
+	
+	<update id="updateUser1">
+		UPDATE USER1 SET name=#{name}, hp=#{hp}, age=#{age} WHERE id=#{id}
+	</update>
+	
+  
+  	<delete id="deleteUser1">
+  		DELETE FROM USER1 WHERE id=#{id}
+  	</delete>
+</mapper>
