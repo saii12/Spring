@@ -1,2 +1,13 @@
-package kr.co.sboard.controller;public class MainController {
+package kr.co.sboard.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class MainController {
+
+    @GetMapping(value={"/", "/index"})
+    public String index(){
+        return "/index";
+    }
 }
