@@ -1,10 +1,10 @@
-package kr.co.sboard.entity;
+package kr.co.sboard.dto;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import kr.co.sboard.dto.UserDTO;
+import kr.co.sboard.entity.UserEntity;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -14,22 +14,13 @@ import java.time.LocalDateTime;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@Table(name = "User")
-public class UserEntity {
+public class UserDTO {
 
-    @Id
     private String uid;
-    private String pass;
+    private String pass1;
     private String name;
-
-    @Column(name = "nick", unique = true)
     private String nick;
-
-    @Column(name = "email", unique = true)
     private String email;
-
-    @Column(name = "hp", unique = true)
     private String hp;
     private String role;
     private String zip;
@@ -39,10 +30,10 @@ public class UserEntity {
     private LocalDateTime regDate;
     private LocalDateTime leaveDate;
 
-    public UserDTO toDTO(){
-        return UserDTO.builder()
+    public UserEntity toEntity(){
+        return UserEntity.builder()
                 .uid(uid)
-                .pass1(pass)
+                .pass(pass1)
                 .name(name)
                 .nick(nick)
                 .email(email)
