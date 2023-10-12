@@ -1,32 +1,25 @@
-package kr.ch10.entity;
+package kr.ch10.dto;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import kr.ch10.dto.User2DTO;
+import kr.ch10.entity.User2Entity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-@Entity
-@Table(name="USER2")
-public class User2Entity {
-	
-	@Id
+public class User2DTO {
 	private String id;
 	private String name;
 	private String hp;
 	private int age;
-	
-	// DTO 변환 메서드
-	public User2DTO toDTO() {
+
+	// Entity 변환 메서드
+	public User2Entity toEntity() {
 		
-		return User2DTO.builder()
+		return User2Entity.builder()
 				.id(id)
 				.name(name)
 				.hp(hp)
