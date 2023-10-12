@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 public class UserDTO {
 
     private String uid;
-    private String pass1;
+    private String pass1; // entity랑 왜 변수 이름 다르지??
     private String name;
     private String nick;
     private String email;

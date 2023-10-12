@@ -19,7 +19,7 @@ import lombok.ToString;
 @Setter
 @Builder
 @ToString
-public class MyUserDetails implements UserDetails {
+public class MyUserDetails implements UserDetails { // MyUserDetails는 principal임
 	private static final long serialVersionUID = -5532680704133363159L;
 
 	private UserEntity user;

@@ -23,7 +23,7 @@ public class UserEntity {
     private String pass;
     private String name;
 
-    @Column(name = "nick", unique = true)
+    @Column(name = "nick", unique = true) // Column 선언 왜 한거지? : 테이블 고유키 선언되있어서 그런것
     private String nick;
 
     @Column(name = "email", unique = true)
