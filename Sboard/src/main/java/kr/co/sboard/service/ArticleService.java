@@ -2,11 +2,14 @@ package kr.co.sboard.service;
 
 import kr.co.sboard.dto.ArticleDTO;
 import kr.co.sboard.dto.FileDTO;
+import kr.co.sboard.dto.PageRequestDTO;
+import kr.co.sboard.dto.PageResponseDTO;
 import kr.co.sboard.entity.ArticleEntity;
 import kr.co.sboard.repository.ArticleRepository;
 import kr.co.sboard.repository.FileRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
@@ -28,13 +31,31 @@ public class ArticleService {
 
     private  final ArticleRepository articleRepository;
     private final FileRepository fileRepository;
+    private final ModelMapper modelMapper;
 
-    public Page<ArticleEntity> findByParent(int pg){
+    public PageResponseDTO findByParentAndCate(PageRequestDTO pageRequestDTO){
 
-        Pageable pageable = PageRequest.of(pg-1, 10, Sort.Direction.DESC, "no"); // 글 10개 나오도록
-        Page<ArticleEntity> result = articleRepository.findByParent(0, pageable); // parent 0은 본글이므로 댓글이 걸러짐
+        Pageable pageable = pageRequestDTO.getPageable("no"); // Pageable pageable = PageRequest.of(pg-1, 10, Sort.Direction.DESC, "no");이거랑 같음
 
-        return result;
+
+        //
+        //Pageable pageable = PageRequest.of(pg-1, 10, Sort.Direction.DESC, "no"); // 글 10개 나오도록
+        Page<ArticleEntity> result = articleRepository.findByParentAndCate(0, pageRequestDTO.getCate(), pageable); // parent 0은 본글이므로 댓글이 걸러짐
+
+        // result.getContent() 리스트임, stream은 통로(pipeline) : 가공처리를 위함, map은 리스트 안에 객체수만큼 순회(for문과 같다)
+        List<ArticleDTO> dtoList = result.getContent()
+                                        .stream()
+                                        .map(entity -> modelMapper.map(entity, ArticleDTO.class)) // entity와 ArticleDTO의 속성이 같아서 가능
+                                        .toList();
+
+        int totalElement = (int) result.getTotalElements();
+
+
+        return PageResponseDTO.builder()
+                .pageRequestDTO(pageRequestDTO)
+                .dtoList(dtoList)
+                .total(totalElement)
+                .build();
     }
 
 
@@ -86,6 +107,10 @@ public class ArticleService {
         }
         log.info("fileUpload...8");
         return null;
+    }
+
+    public void delete(String no){
+        articleRepository.deleteById(no); //Repository 고유 메서드 deleteById 는 String타입만 매개변수 가능
     }
 
 

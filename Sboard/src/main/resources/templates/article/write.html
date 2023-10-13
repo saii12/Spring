@@ -6,8 +6,9 @@
     <div class="panel">
         <!-- /.panel-heading -->
         <div class="panel-body">
-            <form th:action="@{/article/register}" method="post" enctype="multipart/form-data"> <!-- } 괄호 하나 빠져서 전체 태그가 하나도 안 나오네 / Thymeleaf문제면 페이지는 뜨지만 태그들이 안 나옴 -->
+            <form th:action="@{/article/write}" method="post" enctype="multipart/form-data"> <!-- } 괄호 하나 빠져서 전체 태그가 하나도 안 나오네 / Thymeleaf문제면 페이지는 뜨지만 태그들이 안 나옴 -->
                 <input type="hidden" name="writer" th:value="${#authentication.principal.user.uid}">
+                <input type="text" name="cate" th:value="${pageRequestDTO.cate}">
                 <div class="form-group">
                     <label>제목</label>
                     <input type="text" name="title" class="form-control" placeholder="제목을 입력하세요.">

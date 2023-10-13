@@ -1,8 +1,8 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.thymeleaf.org/"
-      layout:decorate="/index.html">
+      layout:decorate="/index.html"> <!-- /index.html에 레이아웃 할거다 -->
 
-<div class="sboard-list" layout:fragment="content">
+<div class="sboard-list" layout:fragment="content"> <!-- /index.html에서 해당 공간에 레이아웃함 -->
     <div class="panel">
         <!-- /.panel-heading -->
         <div class="panel-body">
@@ -18,12 +18,16 @@
                     </tr>
                     </thead>
                     <tbody>
-                        <tr th:each="article:${pageArticle.content}"> <!-- Thymeleaf 속성 / page타입은 content로 내용 가져오나보다-->
+                        <tr th:each="article:${pageResponseDTO.dtoList}"> <!-- Thymeleaf 속성 / page타입은 content로 내용 가져오나보다-->
                             <td>[[${article.no}]]</td>
                             <td>[[${article.title}]]</td>
                             <td>[[${article.writer}]]</td>
                             <td>[[${article.hit}]]</td>
                             <td>[[${article.rdate}]]</td>
+                            <td>
+                                <a th:href="@{#}">수정</a>
+                                <a th:href="@{/article/delete(no=${article.no})}">삭제</a> <!--${pageResponseDTO.dtoList}안에 ArticleDTO 객체가 있고 no 속성의 타입은 int임-->
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -36,16 +40,21 @@
     <div class="text-center">
         <ul class="pagination">
 
-            <li th:if="${pageArticle.hasPrevious}" class="paginate_button previous disabled" aria-controls="dataTables-example" tabindex="0" id="dataTables-example_previous">
-                <a href="#">이전</a>
+            <!-- class에 previous 다음에 있던 disabled 지우니까 버튼위에서 커서 뜨네, disable 있으면 금지표시뜸 -->
+            <li th:if="${pageResponseDTO.prev}" class="paginate_button previous" aria-controls="dataTables-example" tabindex="0" id="dataTables-example_previous">
+                <a th:href="@{/article/list(cate=free,pg=${pageResponseDTO.start - 1})}">이전</a> <!-- thymeleaf 속성 th 빠트리지말기!! -->
             </li>
 
-            <th:block th:each="num : ${#numbers.sequence(1, pageArticle.totalPages)}"> <!-- # 붙으면 Thymeleaf객체라는 의미 -->
-                <li class="paginate_button" aria-controls="dataTables-example" tabindex="0"><a th:href="@{/article/list(cate=free,pg=${num})}">[[${num}]]</a></li> <!-- num 변수(페이지번호) 이렇게 반복하네 -->
-            </th:block>
+            <!-- # 붙으면 Thymeleaf객체라는 의미 -->
+            <li th:each="num : ${#numbers.sequence(pageResponseDTO.start, pageResponseDTO.end)}"
+                class="paginate_button"
+                aria-controls="dataTables-example"
+                tabindex="0">
+            <a th:href="@{/article/list(cate=free,pg=${num})}">[[${num}]]</a> <!-- num 변수(페이지번호) 이렇게 반복하네 -->
+            </li>
 
-            <li th:if="${pageArticle.hasNext}" class="paginate_button next" aria-controls="dataTables-example" tabindex="0" id="dataTables-example_next">
-                <a href="#">다음</a>
+            <li th:if="${pageResponseDTO.next}" class="paginate_button next" aria-controls="dataTables-example" tabindex="0" id="dataTables-example_next">
+                <a th:href="@{/article/list(cate=free,pg=${pageResponseDTO.end + 1})}">다음</a> <!-- 파라미터 보낼때 ?아니라 () 이용 -->
             </li>
 
         </ul>
@@ -53,7 +62,7 @@
 
     <!-- /.panel -->
     <div class="text-right">
-        <a th:href="@{/article/register}"  class="btn btn-primary">글쓰기</a>
+        <a th:href="@{/article/write(cate=${pageResponseDTO.cate})}"  class="btn btn-primary">글쓰기</a>
     </div>
 </div>
 
